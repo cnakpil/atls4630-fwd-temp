@@ -35,7 +35,7 @@ I went out to find inspiration through an examination of my current WordPress do
 
 ## Wireframes
 
-After all that prep work, putting everything together in Figma was fairly straightforward. For headers, I followed Danny Rankin's advice (patent pending) to make things that are important on a page really, really big.
+After all that prep work, putting everything together in Figma was fairly straightforward. For headers, I followed Danny Rankin's advice (patent pending) to make things that are important on a page really, really big. I also intend to put some fun hover effects on links and a fade in transition on the Assignments page when I have enough entries to warrant scrolling on the page.
 
 Other than that, I'll let the work speak for itself.
 
