@@ -6,8 +6,8 @@ Design and develop a class portal that will consolidate all class assignments, p
 
 ### Milestone 2
 
-- [ ] Multiple HTML pages linked together in a logical manner
-- [ ] Pages styled with CSS, linked externally
+- [x] Multiple HTML pages linked together in a logical manner
+- [x] Pages styled with CSS, linked externally
 - [ ] Responsive design
 - [ ] Clear organization between assignments and projects
 - [ ] Links to the process journal for each assignment/project
