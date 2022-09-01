@@ -1,4 +1,4 @@
-# Class Portal, Milestone 1
+# Class Portal, Milestone 2
 
 ## Assignment Goal
 
