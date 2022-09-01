@@ -10,11 +10,22 @@
         <script src="main.js" defer></script>
     </head>
     <body id="landing">
-        <h1>ATLS 4630 | Ctd | CU boulder</h1>
-        <h2>assignment</h2>
-        <h2>projects</h2>
-        <h2>github</h2>
-        <img src="images/make.svg" alt="Make">
-        <img src="images/stuff.svg" alt="Stuff">
+        <div id="landing-flex-container">
+            <div class="landing-flex-item">
+                <div id="splash-display">
+                    <h1>ATLS 4630 | Ctd | CU boulder</h1>
+                    <img src="images/make.svg" alt="Make" id="make">
+                    <img src="images/stuff.svg" alt="Stuff" id="stuff">
+                </div>
+            </div>
+            <div class="landing-flex-item" id="link-container">
+                <div id="landing-links">
+                    <div id="link-spacer"></div>
+                    <a href="assignments.html" class="link-flex-item"><h2>assignments</h2></a>
+                    <a href="projects.html" class="link-flex-item"><h2>projects</h2></a>
+                    <a href="https://github.com/cnakpil/atls4630-fwd" target="_blank" class="link-flex-item"><h2>github</h2></a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

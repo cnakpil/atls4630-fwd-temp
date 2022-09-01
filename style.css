@@ -5,6 +5,7 @@ html {
   color: #fffcfd;
 }
 
+/* Page colors */
 body#landing {
   background-color: #003473;
 }
@@ -15,6 +16,7 @@ body#project {
   background-color: #013200;
 }
 
+/* Headings */
 body h1 {
   font-family: acier-bat-solid, sans-serif;
   font-style: normal;
@@ -34,4 +36,105 @@ p {
   font-family: aglet-slab, sans-serif;
   font-style: normal;
   font-weight: 400;
+}
+
+/* Landing page layout */
+#landing-flex-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  padding: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.landing-flex-item {
+  /* background-color: red; */
+  height: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-items: center;
+}
+#splash-display {
+  height: 100%;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+#splash-display h1 {
+  margin-bottom: 1rem;
+}
+#link-container {
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link-flex-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* padding: 0.5rem; */
+  display: flex;
+  flex-direction: column;
+}
+#landing-links {
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  height: 60%;
+  font-size: 2vw;
+}
+
+#stuff {
+  width: 60%;
+}
+
+/* Landing page link hover */
+a {
+  background-size: 200% 100%;
+  background-position: -100%;
+  background-image: linear-gradient(
+    to right,
+    #2bc757,
+    #2bc757 50%,
+    #fffcfd 50%
+  );
+  display: inline-block;
+  padding: 0 0;
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+a:before {
+  content: "";
+  background: #2bc757;
+  display: block;
+  position: absolute;
+  /* bottom: 1.5rem; */
+  bottom: 2vw;
+  left: 0;
+  width: 0;
+  height: 0.5vh;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  background-position: 0;
+}
+a:hover::before {
+  width: 100%;
+}
+a:clicked {
+  text-decoration: none;
 }
