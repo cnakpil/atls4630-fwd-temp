@@ -47,18 +47,18 @@ Other than that, I'll let the work speak for itself.
 <!-- <img src="images/landing-desktop.png" width=%> -->
 
 <!-- ![Landing page, Smartphone view](images/landing-android.png) -->
-<img src="images/landing-android.png" width=50%>
+<img src="images/landing-android.png" width=35%>
 
 ### Assignments Page
 
 ![Assignment page, Desktop view](images/assignment-desktop.png)
 
 <!-- ![Assignment page, Smartphone View](images/assignment-android.png) -->
-<img src="images/assignment-android.png" width=50%>
+<img src="images/assignment-android.png" width=35%>
 
 ### Projects Page
 
 ![Project page, Desktop view](images/project-desktop.png)
 
 <!-- ![Project page, Smartphone view](images/project-android.png) -->
-<img src="images/project-android.png" width=50%>
+<img src="images/project-android.png" width=35%>
