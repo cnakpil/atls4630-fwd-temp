@@ -20,8 +20,9 @@ To begin creating the general layout and design of my site, I had to figure out 
 I trend towards using a lot of bold colors and typography when designing landing pages with a focus and being kind of fun and exciting. This means that a lot of my design process starts with choice of font and color palette.
 
 <!-- ![style guide for the class portal](images/style.png) -->
-
-<img src="images/style.png" width=50%>
+<p align="center">
+    <img src="images/style.png" width=50%>
+</p>
 
 The style I ended up going with is something a little funky, a little wierd, and definitely not to everybody's taste. My header font can best be described as "art deco adjacent" while my subheader and paragraph font is a slab serif font. Clean, but a little typewriter-y and square.
 
@@ -47,18 +48,24 @@ Other than that, I'll let the work speak for itself.
 <!-- <img src="images/landing-desktop.png" width=%> -->
 
 <!-- ![Landing page, Smartphone view](images/landing-android.png) -->
-<img src="images/landing-android.png" width=35%>
+<p align="center">
+    <img src="images/landing-android.png" width=35%>
+</p>
 
 ### Assignments Page
 
 ![Assignment page, Desktop view](images/assignment-desktop.png)
 
 <!-- ![Assignment page, Smartphone View](images/assignment-android.png) -->
-<img src="images/assignment-android.png" width=35%>
+<p align="center">
+    <img src="images/assignment-android.png" width=35%>
+</p>
 
 ### Projects Page
 
 ![Project page, Desktop view](images/project-desktop.png)
 
 <!-- ![Project page, Smartphone view](images/project-android.png) -->
-<img src="images/project-android.png" width=35%>
+<p align="center">
+    <img src="images/project-android.png" width=35%>
+</p>
