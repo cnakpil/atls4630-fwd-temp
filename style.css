@@ -1,0 +1,37 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  color: #fffcfd;
+}
+
+body#landing {
+  background-color: #003473;
+}
+body#assignment {
+  background-color: #4e042c;
+}
+body#project {
+  background-color: #013200;
+}
+
+body h1 {
+  font-family: acier-bat-solid, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+h2 {
+  font-family: aglet-slab, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+h3 {
+  font-family: aglet-slab, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+p {
+  font-family: aglet-slab, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
