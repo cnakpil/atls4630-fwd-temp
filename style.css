@@ -39,7 +39,6 @@ p {
 }
 
 /* Landing page layout */
-/* test */
 main {
   display: flex;
   flex-direction: row;
@@ -99,11 +98,12 @@ a:before {
   background: #2bc757;
   display: block;
   position: absolute;
-  /* bottom: 1.5rem; */
-  bottom: 2vw;
+  top: 2.75rem;
+  /* bottom: 0rem; */
+  /* bottom: 0vw; */
   left: 0;
   width: 0;
-  height: 0.5vh;
+  height: 0.25rem;
   transition: all 0.3s ease-in-out;
 }
 a:hover {
