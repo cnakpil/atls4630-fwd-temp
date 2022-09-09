@@ -117,7 +117,7 @@ p {
   align-items: baseline;
   margin-top:3rem;
 }
-.week {
+.subheader {
   /* min-width: 25vw; */
   flex-grow: 1;
   display: flex;
@@ -125,7 +125,7 @@ p {
   margin-left: 4rem;
   /* margin-right: 5rem; */
 }
-.week h3{
+.subheader h3{
   font-size: 1.5rem;
 }
 .details h2{
