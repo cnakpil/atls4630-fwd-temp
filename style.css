@@ -123,10 +123,13 @@ p {
   display: flex;
   justify-content: left;
   margin-left: 4rem;
+  padding-bottom:1rem;
   /* margin-right: 5rem; */
 }
 .subheader h3{
   font-size: 1.5rem;
+  padding:0;
+  margin:0;
 }
 .details h2{
   font-size: 1.65rem;
@@ -151,7 +154,7 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
   text-decoration: none;
 }
 a:before {
@@ -162,7 +165,7 @@ a:before {
   left: 0;
   width: 0;
   height: .5vh;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .dark a {
   background-image: linear-gradient(to left, #fffcfd, #fffcfd 50%, #C3073F 50%);
@@ -186,72 +189,22 @@ a:before {
 a:hover {
   background-position: 0;
 }
+#landing a:hover{
+  transform: scale(1.5);
+}
+header a:hover{
+  transform: scale(1.15);
+}
+.details a:hover{
+  
+}
 a:hover::before {
-  width: 100%;
+  width: 0%;
 }
-h1 a:hover::before{
-  width:0%;
-}
+/* h1 a:hover::before{
+  width: 0%;
+} */
 a:clicked {
   text-decoration: none;
 }
 
-/* test */
-/* #landing-flex-container {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  padding: 5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.landing-flex-item {
-  /* background-color: red; */
-/*height: 100%;
-  flex-grow: 1;
-  flex-shrink: 1;
-  align-items: center;
-}
-#splash-display {
-  height: 100%;
-  /* background-color: yellow; */
-/*display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-}
-#splash-display h1 {
-  margin-bottom: 1rem;
-}
-#link-container {
-  /* background-color: green; */
-/*display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.link-flex-item {
-  flex-grow: 1;
-  flex-shrink: 1;
-  /* padding: 0.5rem; */
-/*display: flex;
-  flex-direction: column;
-}
-#landing-links {
-  /* background-color: yellow; */
-/*display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 3rem;
-  height: 60%;
-  font-size: 2vw;
-}
-
-#stuff {
-  width: 60%;
-} */
