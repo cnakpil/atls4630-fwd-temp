@@ -11,7 +11,7 @@ Design and develop a class portal that will consolidate all class assignments, p
 - [x] Design a header
 - [x] Create some high fidelity wireframes in Figma
 
-##[LINK TO PART 2](../week2/week2.md)
+## [LINK TO PART 2](../week2/week2.md)
 
 ---
 
