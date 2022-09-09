@@ -3,16 +3,24 @@ html {
   padding: 0;
   margin: 0;
 }
-html.light {
-  color: #121212;
-}
-html.dark {
-  color: #fffcfd;
-}
 
 /* Page colors */
-body#landing.light {
+body.light {
+  color: #121212;
   background-color: #e2e2df;
+}
+body.dark {
+  color: #fffcfd;
+  background-color: #1a1a1d;
+}
+body.blue{
+  color:#fffcfd;
+  background: #003473;
+}
+
+
+/* body#landing.light {
+  
 }
 body#assignment.light {
   background-color: #edcced;
@@ -21,14 +29,14 @@ body#project.light {
   background-color: #c0ffbe;
 }
 body#landing.dark {
-  background-color: #1a1a1d;
+  
 }
 body#assignment.dark {
   background-color: #4e042c;
 }
 body#project.dark {
   background-color: #013200;
-}
+} */
 
 /* Headings */
 body h1 {
@@ -53,6 +61,9 @@ p {
 }
 
 /* Landing page layout */
+#landing header{
+  float: right;
+}
 #landing main {
   display: flex;
   flex-direction: row;
@@ -90,39 +101,50 @@ p {
 
 /* Assignment page layout */
 #assignment header {
-  margin: 2rem 3rem;
+  margin: 4rem 4rem;
 }
 #assignment header img {
   width: 75vw;
 }
 #assignment header h1 {
-  font-size: 2vw;
-}
-#assignment main {
+  font-size: 2.25rem;
 }
 .entry {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: baseline;
+  margin-top:3rem;
 }
-#assignment.week {
+.week {
+  /* min-width: 25vw; */
   flex-grow: 1;
+  display: flex;
+  justify-content: left;
+  margin-left: 4rem;
+  /* margin-right: 5rem; */
 }
-#assignment.details {
-  flex-grow: 3;
+.week h3{
+  font-size: 1.5rem;
+}
+.details h2{
+  font-size: 1.65rem;
+}
+.details{
+  flex-grow: 1;
+  max-width: 75vw;
+  margin-right: 5vw;
+  margin-left: 4rem;
+  /* display: flex;
+  justify-content: left;
+  flex-direction: column; */
 }
 
-/* landing page link hover */
-#landing.light a {
+/* link hover */
+a {
   background-size: 200% 100%;
   background-position: -100%;
-  background-image: linear-gradient(
-    to right,
-    #9a1750,
-    #9a1750 50%,
-    #121212 50%
-  );
   display: inline-block;
   padding: 0 0;
   position: relative;
@@ -132,71 +154,45 @@ p {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
-#landing.light a:before {
+a:before {
   content: "";
+  display: block;
+  position: absolute;
+  top: 5.75vh;
+  left: 0;
+  width: 0;
+  height: .5vh;
+  transition: all 0.3s ease-in-out;
+}
+.dark a {
+  background-image: linear-gradient(to left, #fffcfd, #fffcfd 50%, #C3073F 50%);
+}
+.dark a:before {
+  background: #C3073F;
+}
+.light a {
+  background-image: linear-gradient(to left, #121212, #121212 50%, #9a1750 50%);
+}
+.light a:before {
   background: #9a1750;
-  display: block;
-  position: absolute;
-  top: 2.75rem;
-  /* bottom: 0rem; */
-  /* bottom: 0vw; */
-  left: 0;
-  width: 0;
-  height: 0.25rem;
-  transition: all 0.3s ease-in-out;
 }
-#landing a:hover {
-  background-position: 0;
+.blue a {
+  background-image: linear-gradient(to left, #fffcfd, #fffcfd 50%, #2bc757 50%);
 }
-#landing a:hover::before {
-  width: 100%;
-}
-#landing a:clicked {
-  text-decoration: none;
+.blue a:before {
+  background: #2bc757;
 }
 
-/* assignment page link hover */
-#assignment a {
-  background-size: 200% 100%;
-  background-position: -100%;
-  display: inline-block;
-  padding: 0 0;
-  position: relative;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-}
-#assignment a:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 1.2rem;
-  left: 0;
-  width: 0;
-  height: 0.15rem;
-  transition: all 0.3s ease-in-out;
-}
-#assignment.dark a {
-  background-image: linear-gradient(to left, #fffcfd, #fffcfd 50%, #2bc7be 50%);
-}
-#assignment.dark a:before {
-  background: #2bc7be;
-}
-#assignment.light a {
-  background-image: linear-gradient(to left, #121212, #121212 50%, #219393 50%);
-}
-#assignment.light a:before {
-  background: #219393;
-}
-#assignment a:hover {
+a:hover {
   background-position: 0;
 }
-#assignment p a:hover::before {
+a:hover::before {
   width: 100%;
 }
-#assignment a:clicked {
+h1 a:hover::before{
+  width:0%;
+}
+a:clicked {
   text-decoration: none;
 }
 
