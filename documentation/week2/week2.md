@@ -1,5 +1,7 @@
 # Class Portal, Milestone 2
 
+## [Link to Part 1](../week1/week1.md)
+
 ## Assignment Goal
 
 Design and develop a class portal that will consolidate all class assignments, projects, and documentation in one place. The portal should be a good representation of my current  design and web development skills in vanilla HTML, CSS, and JS.
