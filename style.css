@@ -18,26 +18,6 @@ body.blue{
   background: #003473;
 }
 
-
-/* body#landing.light {
-  
-}
-body#assignment.light {
-  background-color: #edcced;
-}
-body#project.light {
-  background-color: #c0ffbe;
-}
-body#landing.dark {
-  
-}
-body#assignment.dark {
-  background-color: #4e042c;
-}
-body#project.dark {
-  background-color: #013200;
-} */
-
 /* Headings */
 body h1 {
   font-family: acier-bat-solid, sans-serif;
@@ -208,7 +188,7 @@ p {
   background-position: 0;
 }
 #landing a:hover{
-  transform: scale(1.5);
+  transform: scale(1.15);
 }
 
 header a:hover{

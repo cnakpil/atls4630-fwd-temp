@@ -8,16 +8,22 @@ Design and develop a class portal that will consolidate all class assignments, p
 
 - [x] Multiple HTML pages linked together in a logical manner
 - [x] Pages styled with CSS, linked externally
-- [ ] Responsive design
-- [ ] Clear organization between assignments and projects
+- [x] Responsive design
+- [x] Clear organization between assignments and projects
 - [ ] Links to the process journal for each assignment/project
+
+### Stretch Goals
+
+- [ ] Animations on link hover
+- [ ] Light/Dark mode
+- [ ] Improve responsiveness with JS (swap to centered justification, swapping img headers to suit smaller screen sizes)
 
 ---
 
 ## Low Fidelity Wireframes
 
-Contrary to proper logical order, I returned back to making some lower fidelity wireframes to help me plan the html code structure for my various layouts and pages.
+Contrary to proper logical order, I returned back to making some lower fidelity wireframes to help me plan the html code structure for my various layouts and pages. Planning out the code by hand before I begin allows me to do the code equivalent of "measure twice, cut once".
 
 <!-- insert hand drawn sketch images here -->
 
-Planning out the code before I begin allows me to do the code equivalent of "measure twice, cut once".
+
