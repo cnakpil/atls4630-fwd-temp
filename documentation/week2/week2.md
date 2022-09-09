@@ -12,7 +12,7 @@ Design and develop a class portal that will consolidate all class assignments, p
 - [x] Pages styled with CSS, linked externally
 - [x] Responsive design
 - [x] Clear organization between assignments and projects
-- [ ] Links to the process journal for each assignment/project
+- [x] Links to the process journal for each assignment/project
 
 ### Stretch Goals
 
