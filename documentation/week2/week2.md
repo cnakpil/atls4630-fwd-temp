@@ -24,9 +24,10 @@ Design and develop a class portal that will consolidate all class assignments, p
 
 ### Stretch Goals
 
-- [ ] Animations on link hover
+- [x] Animations on link hover
 - [ ] Light/Dark mode
 - [ ] Improve responsiveness with JS (swap to centered justification, swapping img headers to suit smaller screen sizes)
+- [ ] Add media queries to remove hover effects on mobile devices
 
 ---
 
