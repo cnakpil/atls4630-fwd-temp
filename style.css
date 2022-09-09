@@ -65,7 +65,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 1vw;
+  margin-left: 4vw;
   min-width: 55vw;
   flex-grow: 1;
 }
