@@ -139,13 +139,16 @@ p {
   max-width: 75vw;
   margin-right: 5vw;
   margin-left: 4rem;
-  /* display: flex;
-  justify-content: left;
-  flex-direction: column; */
+}
+.detail-links{
+  display: flex;
+  direction: row;
+  justify-content: space-between;
+  max-width: 250px;
 }
 
 /* link hover */
-a {
+.animate a {
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
@@ -157,36 +160,35 @@ a {
   transition: all 0.25s ease-in-out;
   text-decoration: none;
 }
-a:before {
+.animate a:before {
   content: "";
   display: block;
   position: absolute;
-  top: 5.75vh;
+  top: 3vh;
   left: 0;
   width: 0;
-  height: .5vh;
+  height: .2vh;
   transition: all 0.25s ease-in-out;
 }
-.dark a {
+.dark .animate a {
   background-image: linear-gradient(to left, #fffcfd, #fffcfd 50%, #C3073F 50%);
 }
-.dark a:before {
+.dark .animate a:before {
   background: #C3073F;
 }
-.light a {
+.light .animate a {
   background-image: linear-gradient(to left, #121212, #121212 50%, #9a1750 50%);
 }
-.light a:before {
+.light .animate a:before {
   background: #9a1750;
 }
-.blue a {
+.blue .animate a {
   background-image: linear-gradient(to left, #fffcfd, #fffcfd 50%, #2bc757 50%);
 }
-.blue a:before {
+.blue .animate a:before {
   background: #2bc757;
 }
-
-a:hover {
+.animate a:hover {
   background-position: 0;
 }
 #landing a:hover{
@@ -195,15 +197,15 @@ a:hover {
 header a:hover{
   transform: scale(1.15);
 }
-.details a:hover{
-  
+.detail-links a:hover{
+  transform: scale(1.15);
 }
 a:hover::before {
   width: 0%;
 }
-/* h1 a:hover::before{
-  width: 0%;
-} */
+.detail-links a:hover::before{
+  width: 100%;
+}
 a:clicked {
   text-decoration: none;
 }
