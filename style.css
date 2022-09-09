@@ -2,17 +2,31 @@ body,
 html {
   padding: 0;
   margin: 0;
+}
+html.light {
+  color: #121212;
+}
+html.dark {
   color: #fffcfd;
 }
 
 /* Page colors */
-body#landing {
-  background-color: #003473;
+body#landing.light {
+  background-color: #e2e2df;
 }
-body#assignment {
+body#assignment.light {
+  background-color: #edcced;
+}
+body#project.light {
+  background-color: #c0ffbe;
+}
+body#landing.dark {
+  background-color: #1a1a1d;
+}
+body#assignment.dark {
   background-color: #4e042c;
 }
-body#project {
+body#project.dark {
   background-color: #013200;
 }
 
@@ -39,7 +53,7 @@ p {
 }
 
 /* Landing page layout */
-main {
+#landing main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -74,15 +88,40 @@ main {
   font-size: 2.25rem;
 }
 
-/* Landing page link hover */
-a {
+/* Assignment page layout */
+#assignment header {
+  margin: 2rem 3rem;
+}
+#assignment header img {
+  width: 75vw;
+}
+#assignment header h1 {
+  font-size: 2vw;
+}
+#assignment main {
+}
+.entry {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+#assignment.week {
+  flex-grow: 1;
+}
+#assignment.details {
+  flex-grow: 3;
+}
+
+/* landing page link hover */
+#landing.light a {
   background-size: 200% 100%;
   background-position: -100%;
   background-image: linear-gradient(
     to right,
-    #2bc757,
-    #2bc757 50%,
-    #fffcfd 50%
+    #9a1750,
+    #9a1750 50%,
+    #121212 50%
   );
   display: inline-block;
   padding: 0 0;
@@ -93,9 +132,9 @@ a {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
-a:before {
+#landing.light a:before {
   content: "";
-  background: #2bc757;
+  background: #9a1750;
   display: block;
   position: absolute;
   top: 2.75rem;
@@ -106,39 +145,59 @@ a:before {
   height: 0.25rem;
   transition: all 0.3s ease-in-out;
 }
-a:hover {
+#landing a:hover {
   background-position: 0;
 }
-a:hover::before {
+#landing a:hover::before {
   width: 100%;
 }
-a:clicked {
+#landing a:clicked {
   text-decoration: none;
 }
 
-/* Assignment header flex */
-#header-flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+/* assignment page link hover */
+#assignment a {
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 0 0;
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
 }
-#header-flex img {
-  flex-grow: 1;
-  /* max-width: 50%; */
+#assignment a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1.2rem;
+  left: 0;
+  width: 0;
+  height: 0.15rem;
+  transition: all 0.3s ease-in-out;
 }
-.entry {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+#assignment.dark a {
+  background-image: linear-gradient(to left, #fffcfd, #fffcfd 50%, #2bc7be 50%);
+}
+#assignment.dark a:before {
+  background: #2bc7be;
+}
+#assignment.light a {
+  background-image: linear-gradient(to left, #121212, #121212 50%, #219393 50%);
+}
+#assignment.light a:before {
+  background: #219393;
+}
+#assignment a:hover {
+  background-position: 0;
+}
+#assignment p a:hover::before {
   width: 100%;
-  /* justify-content: space-around;
-  align-items: center; */
 }
-.week {
-  flex-grow: 1;
-}
-.content {
-  flex-grow: 5;
+#assignment a:clicked {
+  text-decoration: none;
 }
 
 /* test */
