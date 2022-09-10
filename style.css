@@ -200,7 +200,10 @@ p {
 #landing a:hover {
   transform: scale(1.15);
 }
-.detail-links a:hover{
+header a:hover {
+  transform: scale(1.15);
+}
+.detail-links a:hover {
   transform: scale(1.15);
 }
 .animate a:hover::before {
