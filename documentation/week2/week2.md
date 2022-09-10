@@ -2,6 +2,8 @@
 
 ## [Link to Part 1](../week1/week1.md)
 
+## [Link to Class Portal](https://atls4630-fwd.vercel.app/)
+
 ### Assignment Goal
 
 Design and develop a class portal that will consolidate all class assignments, projects, and documentation in one place. The portal should be a good representation of my current  design and web development skills in vanilla HTML, CSS, and JS.
