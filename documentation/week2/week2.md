@@ -20,6 +20,7 @@ Design and develop a class portal that will consolidate all class assignments, p
 - [ ] Implement light/dark mode
 - [ ] Improve responsiveness with JS (swap to centered justification, swapping img headers to suit smaller screen sizes)
 - [ ] Add media queries to remove hover effects on mobile devices
+- [ ] Add "Back to Top" link on Assignment/Project pages
 
 ---
 
