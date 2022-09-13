@@ -4,6 +4,15 @@ document.addEventListener('click', event => {
     const isDisabled = target.classList.contains('disabled')
 
     if (isCell && !isDisabled) {
-        // The player clicked on a cell that is still empty
+        const cellValue = target.dataset.value
+
+        board.xTurn === true
+            ? board.xState.push(cellValue)
+            : board.oState.push(cellValue)
+
+        target.classList.add('disabled')
+        target.classList.add(board.xTurn ? 'x' : 'o')
+
+        board.xTurn = !board.xTurn
     }
 })
