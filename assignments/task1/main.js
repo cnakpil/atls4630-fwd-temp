@@ -2,6 +2,8 @@ const ttt = {
     xTurn: true,
     xState: [],
     oState: [],
+
+    // 2d array to hold possible win conditions
     winStates: [
         // Rows
         ['0', '1', '2'],
@@ -28,12 +30,34 @@ document.addEventListener('click', event => {
         const cellValue = target.dataset.value
 
         ttt.xTurn === true
-            ? ttt.xState.push(cellValue)
-            : ttt.oState.push(cellValue)
+            ? ttt.xState.push(cellValue) // if
+            : ttt.oState.push(cellValue) // else
 
         target.classList.add('disabled')
-        target.classList.add(ttt.xTurn ? 'x' : 'o')
+        target.classList.add(ttt.xTurn ? 'x' : 'o') // depending on true/false, add x or o
 
         ttt.xTurn = !ttt.xTurn
     }
+
+    // Check for endgame states after every click
+    // Check for draws
+    if (!document.querySelectorAll('.cell:not(.disabled)').length) {
+        document.querySelector('.game-over').classList.add('visible')
+        document.querySelector('.game-over-text').textContent = 'Draw!'
+    }
+
+    // Win States
+    ttt.winStates.forEach(winningState => {
+    const xWins = winningState.every(state => ttt.xState.includes(state))
+    const oWins = winningState.every(state => ttt.oState.includes(state))
+  
+    if (xWins || oWins) {
+        document.querySelectorAll('.cell').forEach(cell => cell.classList.add('disabled'))
+        document.querySelector('.game-over').classList.add('visible')
+        document.querySelector('.game-over-text').textContent = xWins
+            ? 'X wins!'
+            : 'O wins!'
+    }
 })
+})
+
