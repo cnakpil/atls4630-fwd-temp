@@ -25,4 +25,5 @@ Create a tic-tac-toe game with either click events or drag/drop events and a res
 ### Resources
 
 - [MDN Data-Value attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+- [MDN nth-child attributes](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
 - 
