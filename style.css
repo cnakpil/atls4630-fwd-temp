@@ -4,6 +4,15 @@ html {
   margin: 0;
 }
 
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.8s ease-out;
+}
+
 /* Page colors */
 body.light {
   color: #121212;
