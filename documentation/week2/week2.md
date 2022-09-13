@@ -19,6 +19,7 @@ Design and develop a class portal that will consolidate all class assignments, p
 ### Stretch Goals
 
 - [x] Animations on link hover
+- [x] Page fade transitions
 - [ ] Implement light/dark mode
 - [ ] Improve responsiveness with JS (swap to centered justification, swapping img headers to suit smaller screen sizes)
 - [ ] Add media queries to remove hover effects on mobile devices
@@ -70,3 +71,6 @@ One of my biggest dilemmas is how to tell viewers that something is a link (and 
 
 [This CSS Tricks tutorial to several hover effects](https://css-tricks.com/css-link-hover-effects/) and [the Nielsen Norman Group's Guidelines for Visualizing Links](https://www.nngroup.com/articles/guidelines-for-visualizing-links/) provided me an excellent starting point as to how one might make a link interactable without breaking aesthetic.
 
+### Page Transitions
+
+I've always been a fan of page transitions on "display" websites where feel and appearance are important rather than a hard cut between pages. [This tutorial](https://www.impressivewebs.com/fading-in-page-on-load-with-css-javascript/) helped me keep the page hidden while everything loads in and then fades in the page content after the fact.
