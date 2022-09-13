@@ -61,3 +61,15 @@ document.addEventListener('click', event => {
     })
 })
 
+// set reset function on button click
+document.querySelector('.restart').addEventListener('click', () => {
+    document.querySelector('.game-over').classList.remove('visible')
+    document.querySelectorAll('.cell').forEach(cell => {
+        cell.classList.remove('disabled', 'x', 'o')
+    })
+
+    ttt.xTurn = true
+    ttt.xState = []
+    ttt.oState = []
+})
+
