@@ -30,13 +30,13 @@ document.addEventListener('click', event => {
         const cellValue = target.dataset.value
 
         ttt.xTurn === true
-            ? ttt.xState.push(cellValue) // if
-            : ttt.oState.push(cellValue) // else
+            ? ttt.xState.push(cellValue) // if true, push cell number to xState array
+            : ttt.oState.push(cellValue) // else push cell number to oState array
 
-        target.classList.add('disabled')
+        target.classList.add('disabled') // make cell unclickable
         target.classList.add(ttt.xTurn ? 'x' : 'o') // depending on true/false, add x or o
 
-        ttt.xTurn = !ttt.xTurn
+        ttt.xTurn = !ttt.xTurn // flip turn toggle
     }
 
     // Check for endgame states after every click
@@ -48,16 +48,16 @@ document.addEventListener('click', event => {
 
     // Win States
     ttt.winStates.forEach(winningState => {
-    const xWins = winningState.every(state => ttt.xState.includes(state))
-    const oWins = winningState.every(state => ttt.oState.includes(state))
+        const xWins = winningState.every(state => ttt.xState.includes(state))
+        const oWins = winningState.every(state => ttt.oState.includes(state))
   
-    if (xWins || oWins) {
-        document.querySelectorAll('.cell').forEach(cell => cell.classList.add('disabled'))
-        document.querySelector('.game-over').classList.add('visible')
-        document.querySelector('.game-over-text').textContent = xWins
-            ? 'X wins!'
-            : 'O wins!'
-    }
-})
+        if (xWins || oWins) {
+            document.querySelectorAll('.cell').forEach(cell => cell.classList.add('disabled'))
+            document.querySelector('.game-over').classList.add('visible')
+            document.querySelector('.game-over-text').textContent = xWins
+                ? 'X wins!'
+                : 'O wins!'
+        }
+    })
 })
 
