@@ -15,7 +15,7 @@ Create a tic-tac-toe game with either click events or drag/drop events and a res
 
 ### To-do
 
-- [ ] Decide whether click or drag/drop
+- [x] <s>Decide whether click or drag/drop</s> Opting for click interaction
 - [ ] Code game
 - [ ] Code reset conditions
 - [ ] Page styling for both dark/light mode w/ toggle
