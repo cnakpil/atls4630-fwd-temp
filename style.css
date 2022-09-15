@@ -148,20 +148,25 @@ ul {
 }
 
 /* link hover */
-.detail-links a {
-  display: inline-block;
+.details a {
   transition: all 0.25s ease-in-out;
   text-decoration: none;
 }
-.dark .detail-links a {
+.dark .details a {
   color: #c3073f;
 }
-.light .detail-links a {
+.light .details a {
   color: #9a1750;
+}
+.details a:hover {
+  color: #fffcfd;
+}
+
+.detail-links a {
+  display: inline-block;
 }
 .detail-links a:hover {
   transform: scale(1.15);
-  color: #fffcfd;
 }
 
 .animate a {
