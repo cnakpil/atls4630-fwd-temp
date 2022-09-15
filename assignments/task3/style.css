@@ -75,3 +75,7 @@ p {
   line-height: 125%;
   margin-bottom: 10px;
 }
+
+#input {
+  text-align: center;
+}

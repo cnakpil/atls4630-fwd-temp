@@ -1,22 +1,34 @@
-<div class="entry">
-  <div class="subheader">
-    <h3>task 04</h3>
-  </div>
-  <div class="details">
-    <h2>Assignment Title</h2>
-    <p>
-      Vestibulum in leo sit amet ipsum porta varius. Fusce commodo, metus ac
-      finibus feugiat, libero mi luctus magna, scelerisque cursus neque neque
-      eget risus. Nulla elit lacus, rutrum id urna ac, fermentum dapibus sem.
-      Sed id accumsan purus, vitae blandit ante. Duis ut odio et dolor eleifend
-      bibendum. Aliquam ac lacus cursus, elementum est sit amet, accumsan
-      lectus. Aenean id pharetra felis. Aenean nunc mi, rutrum eu tellus eu,
-      lacinia finibus ante. Nulla facilisi. Nam vitae velit ex. Interdum et
-      malesuada fames ac ante ipsum primis in faucibus.
-    </p>
-    <div class="detail-links">
-      <p><a href="">LIVE DEMO</a></p>
-      <p><s>DOCUMENTATION</s></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 3 - JS Debugging</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Moons</header>
+      <div class="content">
+        <div class="main">
+          <h1>
+            Can you get this quiz to ask you 3 questions and give you a score?
+          </h1>
+          <div id="questionArea"></div>
+        </div>
+      </div>
+      <footer>
+        <p>
+          Adapted from JavaScript &amp; jQuery: The Missing Manual, 3rd Edition,
+          by <a href="http://sawmac.com/">David McFarland</a>. Published by
+          <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.
+        </p>
+      </footer>
     </div>
-  </div>
-</div>
+    <p id="input"></p>
+    <script>
+      alert("Ready for a quiz?");
+      quiz();
+    </script>
+  </body>
+</html>
