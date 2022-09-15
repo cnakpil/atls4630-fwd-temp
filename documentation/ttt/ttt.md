@@ -18,7 +18,7 @@ Create a tic-tac-toe game with either click events or drag/drop events and a res
 - [x] ~~Decide whether click or drag/drop~~ Opting for click interaction
 - [x] Code game
 - [x] Code reset conditions
-- [ ] Page styling for both dark/light mode w/ toggle
+- [x] Page styling for both dark/light mode w/ toggle
 
 ---
 
@@ -33,3 +33,4 @@ Create a tic-tac-toe game with either click events or drag/drop events and a res
 - [MDN .push method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 - [MDN .includes method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 - [CSS Animation on DOM Insert](https://usefulangle.com/post/377/css-animation-on-dom-insert)
+- [Dark/Light Slider Animation](https://codepen.io/cortez/pen/jOrNGGQ)
