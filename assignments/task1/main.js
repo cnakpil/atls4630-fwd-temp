@@ -12,7 +12,6 @@ currentTheme === "dark"
   : (toggleSwitch.checked = false);
 
 toggleSwitch.addEventListener("change", () => {
-  console.log("switch");
   currentTheme === "dark"
     ? document.querySelector("body").classList.replace("dark", "light")
     : document.querySelector("body").classList.replace("light", "dark");
