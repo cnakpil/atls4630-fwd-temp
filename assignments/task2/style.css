@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=PT+Mono&display=swap");
+
+body,
+select,
+input,
+textarea {
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-size: 1rem;
+}
+h1,
+button {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+select {
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.form-items {
+  margin: 1rem 0;
+}
