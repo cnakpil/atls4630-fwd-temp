@@ -3,7 +3,8 @@
 body,
 select,
 input,
-textarea {
+textarea,
+.submit-text {
   font-family: "PT Mono", monospace;
   font-style: normal;
   font-size: 1rem;
@@ -35,4 +36,27 @@ select {
 
 .form-items {
   margin: 1rem 0;
+}
+
+.submitted {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgb(0 0 0 / 50%) 0 0 0 9999px;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+
+.submit-text {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.visible {
+  display: flex;
 }

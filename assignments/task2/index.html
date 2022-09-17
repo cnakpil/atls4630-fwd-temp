@@ -12,33 +12,34 @@
     <div id="wrapper">
       <form>
         <div class="form-items">
-          <h1><label for="name">Name</label></h1>
-          <input type="text" id="name" name="name" />
+          <h1><label for="name">First Name *</label></h1>
+          <input type="text" id="name" name="name" required />
         </div>
         <div class="form-items">
           <h1><label for="email">Email</label></h1>
           <input type="email" id="email" name="email" />
         </div>
         <div class="form-items">
-          <h1><label for="hangout">When?</label></h1>
+          <h1><label for="hangout">When? *</label></h1>
           <input
             type="date"
             name="myDate"
             min="2022-09-01"
             max="2022-12-31"
             id="hangout"
+            required
           />
         </div>
         <div class="form-items">
-          <h1><label for="location">Location</label></h1>
-          <select id="location" name="location">
+          <h1><label for="location">Location *</label></h1>
+          <select id="location" name="location" required>
             <option value="Boulder">Boulder</option>
             <option value="Westminister">Westminister</option>
             <option value="Erie">Erie</option>
           </select>
         </div>
         <div class="form-items">
-          <h1><label for="comment">Hangout Preferences</label></h1>
+          <h1><label for="comment">Hangout Preferences *</label></h1>
           <div>
             <textarea
               id="comment"
@@ -46,11 +47,16 @@
               rows="5"
               cols="33"
               placeholder="What would you like to do?"
+              required
             ></textarea>
           </div>
         </div>
         <div><button class="submit">Submit</button></div>
       </form>
+    </div>
+    <div class="submitted">
+      <div class="submit-text"></div>
+      <div><button class="close">Close</button></div>
     </div>
   </body>
 </html>
