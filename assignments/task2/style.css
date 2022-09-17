@@ -17,6 +17,14 @@ button {
   margin-bottom: 0.2rem;
   text-transform: uppercase;
 }
+.big {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.25rem;
+  font-weight: 200;
+  margin-bottom: 0.2rem;
+  margin-top: 0;
+  text-transform: uppercase;
+}
 select {
   font-family: "PT Mono", monospace;
   font-style: normal;
@@ -25,6 +33,7 @@ select {
 
 #wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
