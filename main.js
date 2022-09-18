@@ -1,11 +1,14 @@
 document.body.classList.add("hidden");
 let theme = localStorage.getItem("data-theme");
-const slider = document.querySelector(".switch");
-let loaded;
+const toggle = document.querySelector('.theme-switch input[type="checkbox"]');
 
 function doStuff(callback) {
   // on page load
+  // get persistent theme from localStorage
   document.documentElement.setAttribute("data-theme", theme);
+
+  // set toggle to correct side depending on theme
+  theme === "light" ? (toggle.checked = true) : (toggle.checked = false);
 
   // depending on current page, load correct image header
   loadImg();
@@ -38,17 +41,6 @@ function loadImg() {
   }
 }
 
-// function preloader() {
-//   var img = [];
-//   for (var i = 0; i < 6; i++) img[i] = new Image();
-//   img[0].src = "images/makestuff_dark.svg";
-//   img[1].src = "images/makestuff_light.svg";
-//   img[2].src = "images/assignments_dark.svg";
-//   img[3].src = "images/assignments_light.svg";
-//   img[4].src = "images/projects_dark.svg";
-//   img[5].src = "images/projects_light.svg";
-// }
-
 function toDark() {
   document.documentElement.setAttribute("data-theme", "dark");
   localStorage.setItem("data-theme", "dark");
@@ -62,7 +54,18 @@ function toLight() {
   loadImg();
 }
 
-slider.addEventListener("change", () => {
+toggle.addEventListener("change", () => {
   theme = localStorage.getItem("data-theme");
   theme === "dark" ? toLight() : toDark();
 });
+
+// function preloader() {
+//   var img = [];
+//   for (var i = 0; i < 6; i++) img[i] = new Image();
+//   img[0].src = "images/makestuff_dark.svg";
+//   img[1].src = "images/makestuff_light.svg";
+//   img[2].src = "images/assignments_dark.svg";
+//   img[3].src = "images/assignments_light.svg";
+//   img[4].src = "images/projects_dark.svg";
+//   img[5].src = "images/projects_light.svg";
+// }
