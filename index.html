@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,15 +9,18 @@
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
   </head>
-  <body id="landing" class="hidden" data-theme="dark">
-    <!-- <header>
-      <p>light dark</p>
-    </header> -->
+  <body id="landing" class="hidden">
     <main>
       <div class="flexDiv">
         <div id="landing-display-wrapper">
+          <div class="switch">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round"></div>
+            </label>
+          </div>
           <h1>ATLS 4630 | Ctd | CU boulder</h1>
-          <img src="images/makestuff_dark.svg" alt="" />
+          <img id="landing-img" src="images/makestuff_dark.svg" alt="" />
         </div>
       </div>
       <div class="flexDiv animate" id="landing-menu">
