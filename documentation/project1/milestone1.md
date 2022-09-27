@@ -19,7 +19,6 @@ New technologies to learn for this project:
 - [ ] Use Firebase to include user authentication
 - [ ] Smooth out user experience using animations
 - [ ] Light/dark mode
-- [ ] Extend functionality akin to a Google Keep clone
 
 ---
 
