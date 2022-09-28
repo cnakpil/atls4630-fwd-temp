@@ -29,11 +29,11 @@ New technologies to learn for this project:
 ### Mobile
 
 <p align="center">
-    <img src="images/mobile_dark.png" width=50%>
+    <img src="images/mobile_dark.png" width=30%>
 </p>
 
 <p align="center">
-    <img src="images/mobile_light.png" width=50%>
+    <img src="images/mobile_light.png" width=30%>
 </p>
 
 ### Desktop
