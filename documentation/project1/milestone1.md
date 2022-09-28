@@ -11,14 +11,16 @@ New technologies to learn for this project:
 
 ### MVP Functions
 
-- [ ] Persistent to-do list that saves data to Firebase
-- [ ] On either task completion or list completion, shoot a confetti cannon on the screen
+- Persistent to-do list that saves data to Firebase
+- Responsive design
+- Complete visuals according to proposed wireframes
 
 ### Stretch Goals
 
-- [ ] Use Firebase to include user authentication
-- [ ] Smooth out user experience using animations
-- [ ] Light/dark mode
+- Use Firebase to include user authentication
+- Smooth out user experience using animations
+- Light/dark mode
+- On either task completion or list completion, shoot a confetti cannon on the screen - this is entirely to annoy my roommate
 
 ---
 
@@ -26,4 +28,16 @@ New technologies to learn for this project:
 
 ### Mobile
 
+<p align="center">
+    <img src="images/mobile_dark.png" width=50%>
+</p>
+
+<p align="center">
+    <img src="images/mobile_light.png" width=50%>
+</p>
+
 ### Desktop
+
+![Desktop view, dark](images/desktop_dark.png)
+
+![Desktop view, light](images/desktop_light.png)
