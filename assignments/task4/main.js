@@ -42,6 +42,9 @@ function weather() {
         console.log(`${pop}%`);
 
         // change top text depending on pop value
+        // learning arrow function syntax
+
+        // normal function version
         // function textSwap(test) {
         //   return test === 8
         //     ? "images/there-is-an.svg"
@@ -51,6 +54,8 @@ function weather() {
         //     ? "images/there-is-an.svg"
         //     : "images/there-is.svg";
         // }
+
+        // arrow function version
         const textSwap = (test) => {
           return test === 8
             ? "images/there-is-an.svg"
@@ -62,7 +67,7 @@ function weather() {
         };
 
         // save top-text information
-        let whichText = textSwap(8);
+        let whichText = textSwap(pop);
         let topText = document.getElementById("top-text");
         console.log(textSwap(pop));
 
