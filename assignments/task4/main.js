@@ -45,23 +45,20 @@ function weather() {
         // learning arrow function syntax
 
         // normal function version
-        // function textSwap(test) {
-        //   return test === 8
-        //     ? "images/there-is-an.svg"
-        //     : test === 11
-        //     ? "images/there-is-an.svg"
-        //     : 80 <= test < 90
-        //     ? "images/there-is-an.svg"
-        //     : "images/there-is.svg";
-        // }
+        function textSwap(test) {
+          if (test === 8) {return "images/there-is-an.svg"}
+          else if (test === 11) {return "images/there-is-an.svg"}
+          else if (80 <= test < 90) {return "images/there-is-an.svg"}
+          else "images/there-is.svg";
+        }
 
         // arrow function version
-        const textSwap = (test) => {
-          return (test === 8) ? "images/there-is-an.svg"
-            : (test === 11) ? "images/there-is-an.svg"
-            : (80 <= test < 90) ? "images/there-is-an.svg"
-            : "images/there-is.svg";
-        };
+        // const textSwap = (test) => {
+        //   return (test === 8) ? "images/there-is-an.svg"
+        //     : (test === 11) ? "images/there-is-an.svg"
+        //     : (80 <= test < 90) ? "images/there-is-an.svg"
+        //     : "images/there-is.svg";
+        // };
 
         // save top-text information
         let whichText = textSwap(pop);
