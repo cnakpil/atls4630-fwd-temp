@@ -4,7 +4,7 @@ function weather() {
   //geolocation code from MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition
   var options = {
     enableHighAccuracy: true,
-    timeout: 5000,
+    // timeout: 5000,
   };
 
   function success(pos) {
