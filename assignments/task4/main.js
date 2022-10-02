@@ -12,6 +12,7 @@ function weather() {
     let latitude = crd.latitude;
     let longitude = crd.longitude;
     // get weather based on user's lat/lon
+    console.log(latitude + ", " + longitude);
     getWeather(latitude, longitude);
   }
 
