@@ -43,14 +43,14 @@ function weather() {
         let test = 8;
 
         // change top text depending on pop value
-        let topText = document.getElementById("top-text").src;
+        let topText = document.getElementById("top-text");
         test === 8
-          ? (topText = "images/there-is-an.svg")
+          ? (topText.src = "images/there-is-an.svg")
           : pop === 11
-          ? (topText = "images/there-is-an.svg")
+          ? (topText.src = "images/there-is-an.svg")
           : 80 <= pop < 90
-          ? (topText = "images/there-is-an.svg")
-          : (topText = "images/there-is.svg");
+          ? (topText.src = "images/there-is-an.svg")
+          : (topText.src = "images/there-is.svg");
 
         // set html elements to new values
         document.getElementById("icon").src = icon;
