@@ -47,10 +47,6 @@ function weather() {
 
         // normal function version
         function textSwap(test) {
-          // if (test === 8) {return "images/there-is-an.svg"}
-          // else if (test === 11) {return "images/there-is-an.svg"}
-          // else if (80 <= test < 90) {return "images/there-is-an.svg"}
-          // else {return "images/there-is.svg"};
           if((test != 8) && (test != 11) && ((test < 80)||(test => 90))){
             console.log("not vowel")
             return "images/there-is.svg";
