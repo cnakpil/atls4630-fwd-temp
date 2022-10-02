@@ -44,6 +44,9 @@ function weather() {
         //   icon = `assets/lightWeatherIcons/${data.weather[0]["icon"]}.svg`;
         // if (themeStyle == "dark_theme.css")
         //   icon = `assets/darkWeatherIcons/${data.weather[0]["icon"]}.svg`;
+        let pop = "";
+        pop = data.list[0]["pop"];
+        console.log(pop);
         document.getElementById("icon").src = icon;
       })
       .catch(() => {
