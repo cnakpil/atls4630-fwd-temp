@@ -5,19 +5,17 @@ html {
   padding: 0;
   margin: 0;
   height: 100%;
-  background-color: #fff;
-  /* overflow: hidden; */
 }
-h1 {
-  font-size: 10vw;
+p {
+  font-size: 13vw;
   padding: 0;
-  margin: 0;
+  margin: -4vw 0 -2vw 0;
   color: #1b1b81;
 }
 main {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-content: center;
   position: absolute;
   top: 50%;
@@ -34,6 +32,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 4%;
 }
 .flex-wrapper {
   display: flex;
@@ -44,6 +43,7 @@ main {
 img {
   padding: 0;
   margin: 0;
+  position: relative;
 }
 #top-text {
   width: 30vw;
