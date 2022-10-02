@@ -65,6 +65,7 @@ function weather() {
         // set html elements to new values
         document.getElementById("icon").src = icon;
         document.getElementById("percent").innerHTML = `${pop}%`;
+        topText.src = textSwap(8);
       })
       .catch(() => {
         // on error, print msg to console
