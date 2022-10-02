@@ -48,7 +48,7 @@ function weather() {
         pop = data.list[0]["pop"] * 100;
         console.log(`${pop}%`);
         document.getElementById("icon").src = icon;
-        document.getElementById("percent").innerHTML(`${pop}%`);
+        document.getElementById("percent").innerHTML = `${pop}%`;
       })
       .catch(() => {
         // on error, print msg to console
