@@ -38,7 +38,7 @@ function weather() {
         // all icons by P Thanga Vignesh from the Noun Project
         // const themeStyle = theme.getAttribute("href");
         let icon = "";
-        icon = `images/icons/${data.list[0]["icon"]}.svg`;
+        icon = `images/icons/${data.list[0].weather[0]["icon"]}.svg`;
         console.log(icon);
         // if (themeStyle == "light_theme.css")
         //   icon = `assets/lightWeatherIcons/${data.weather[0]["icon"]}.svg`;
