@@ -66,6 +66,7 @@ function weather() {
         document.getElementById("icon").src = icon;
         document.getElementById("percent").innerHTML = `${pop}%`;
         topText.src = textSwap(8);
+        console.log(`current image: ${topText.src}`);
       })
       .catch(() => {
         // on error, print msg to console
