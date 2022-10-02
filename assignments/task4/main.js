@@ -40,10 +40,11 @@ function weather() {
         let pop = "";
         pop = data.list[0]["pop"] * 100;
         console.log(`${pop}%`);
+        let test = 8;
 
         // change top text depending on pop value
         let topText = document.getElementById("top-text").src;
-        pop === 8
+        test === 8
           ? (topText = "images/there-is-an.svg")
           : pop === 11
           ? (topText = "images/there-is-an.svg")
