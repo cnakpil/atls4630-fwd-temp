@@ -57,19 +57,15 @@ function weather() {
 
         // arrow function version
         const textSwap = (test) => {
-          console.log(test);
-          return test === 8
-            ? "images/there-is-an.svg"
-            : test === 11
-            ? "images/there-is-an.svg"
-            : 80 <= test < 90
-            ? "images/there-is-an.svg"
+          return (test === 8) ? "images/there-is-an.svg"
+            : (test === 11) ? "images/there-is-an.svg"
+            : (80 <= test < 90) ? "images/there-is-an.svg"
             : "images/there-is.svg";
         };
 
         // save top-text information
         let whichText = textSwap(pop);
-        console.log(textSwap(pop));
+        console.log(whichText);
         let topText = document.getElementById("top-text");
 
         // set html elements to new values
