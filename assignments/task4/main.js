@@ -30,23 +30,28 @@ function weather() {
       .then((data) => {
         console.log(data);
         // do stuff with the data - get data needed and input into html
-        // document.getElementById("temp").innerHTML = Math.round(data.main.temp);
-        // document.getElementById("humidity").innerHTML = data.main.humidity;
-        // document.getElementById("wind").innerHTML = data.wind.speed;
-        // document.getElementById("wthr").innerHTML = data.weather[0].description;
-        // choose icon set to use based on which stylesheet is active
-        // all icons by P Thanga Vignesh from the Noun Project
-        // const themeStyle = theme.getAttribute("href");
+
+        // get icon name
         let icon = "";
         icon = `images/icons/${data.list[0].weather[0]["icon"]}.svg`;
         console.log(icon);
-        // if (themeStyle == "light_theme.css")
-        //   icon = `assets/lightWeatherIcons/${data.weather[0]["icon"]}.svg`;
-        // if (themeStyle == "dark_theme.css")
-        //   icon = `assets/darkWeatherIcons/${data.weather[0]["icon"]}.svg`;
+
+        // get precipitation probability
         let pop = "";
         pop = data.list[0]["pop"] * 100;
         console.log(`${pop}%`);
+
+        // change top text depending on pop value
+        let topText = document.getElementById("top-text").src;
+        pop === 8
+          ? (topText = "images/there-is-an.svg")
+          : pop === 11
+          ? (topText = "images/there-is-an.svg")
+          : 80 <= pop < 90
+          ? (topText = "images/there-is-an.svg")
+          : (topText = "images/there-is.svg");
+
+        // set html elements to new values
         document.getElementById("icon").src = icon;
         document.getElementById("percent").innerHTML = `${pop}%`;
       })
