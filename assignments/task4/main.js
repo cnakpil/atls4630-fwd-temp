@@ -49,7 +49,7 @@ function weather() {
           if (test === 8) {return "images/there-is-an.svg"}
           else if (test === 11) {return "images/there-is-an.svg"}
           else if (80 <= test < 90) {return "images/there-is-an.svg"}
-          else "images/there-is.svg";
+          else {return "images/there-is.svg"};
         }
 
         // arrow function version
