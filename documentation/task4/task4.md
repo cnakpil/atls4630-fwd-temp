@@ -21,6 +21,7 @@ API data is refreshed every 5 minutes and will display default data if users do 
 - [x] Update grammer to suit all possible precipitation percentages
 - [ ] Change to a Geocode/GeoIP service instead of geolocation to get user location via IP without needing to request their location
 - [ ] Improve mobile responsiveness
+- [ ] Figure out how to delay page load until API response received
 
 ---
 
