@@ -57,6 +57,7 @@ function weather() {
 
         // arrow function version
         const textSwap = (test) => {
+          console.log(test);
           return test === 8
             ? "images/there-is-an.svg"
             : test === 11
@@ -68,8 +69,8 @@ function weather() {
 
         // save top-text information
         let whichText = textSwap(pop);
-        let topText = document.getElementById("top-text");
         console.log(textSwap(pop));
+        let topText = document.getElementById("top-text");
 
         // set html elements to new values
         document.getElementById("icon").src = icon;
