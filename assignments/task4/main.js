@@ -40,10 +40,18 @@ function weather() {
         let pop = "";
         pop = data.list[0]["pop"] * 100;
         console.log(`${pop}%`);
-        let test = 8;
 
         // change top text depending on pop value
-        function textSwap(test) {
+        // function textSwap(test) {
+        //   return test === 8
+        //     ? "images/there-is-an.svg"
+        //     : test === 11
+        //     ? "images/there-is-an.svg"
+        //     : 80 <= test < 90
+        //     ? "images/there-is-an.svg"
+        //     : "images/there-is.svg";
+        // }
+        const textSwap = (test) => {
           return test === 8
             ? "images/there-is-an.svg"
             : test === 11
@@ -51,22 +59,17 @@ function weather() {
             : 80 <= test < 90
             ? "images/there-is-an.svg"
             : "images/there-is.svg";
-        }
+        };
 
+        // save top-text information
+        let whichText = textSwap(8);
         let topText = document.getElementById("top-text");
-        console.log(textSwap(8));
-        // ? (topText.src = "images/there-is-an.svg")
-        // : test === 11
-        // ? (topText.src = "images/there-is-an.svg")
-        // : 80 <= test < 90
-        // ? (topText.src = "images/there-is-an.svg")
-        // : (topText.src = "images/there-is.svg");
+        console.log(textSwap(pop));
 
         // set html elements to new values
         document.getElementById("icon").src = icon;
         document.getElementById("percent").innerHTML = `${pop}%`;
-        topText.src = textSwap(8);
-        console.log(`current image: ${topText.src}`);
+        topText.src = whichText;
       })
       .catch(() => {
         // on error, print msg to console
@@ -77,6 +80,6 @@ function weather() {
   navigator.geolocation.getCurrentPosition(success, error, options);
 }
 
-// run weather function every 10 minutes after initial run, default to fahrenheit
+// run weather function every 5 minutes after initial run, default to fahrenheit
 weather();
-setInterval(weather, 600000);
+setInterval(weather, 300000);
