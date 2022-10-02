@@ -23,7 +23,7 @@ function weather() {
   //weather API AJAX call
   function getWeather(lat, lon) {
     const apiKey = "ca43d7e77aea23aaed476c34dbc2f17d";
-    const url = `https://api.openweathermap.org/data/3.0/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
     // ajax fetch request
     fetch(url)
       .then((response) => response.json())
