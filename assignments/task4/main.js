@@ -45,8 +45,8 @@ function weather() {
         // if (themeStyle == "dark_theme.css")
         //   icon = `assets/darkWeatherIcons/${data.weather[0]["icon"]}.svg`;
         let pop = "";
-        pop = data.list[0]["pop"];
-        console.log(pop);
+        pop = data.list[0]["pop"] * 100;
+        console.log(`${pop}%`);
         document.getElementById("icon").src = icon;
       })
       .catch(() => {
