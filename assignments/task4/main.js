@@ -23,7 +23,7 @@ function weather() {
   //weather API AJAX call
   function getWeather(lat, lon) {
     const apiKey = "ca43d7e77aea23aaed476c34dbc2f17d";
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+    const url = `https://api.openweathermap.org/data/3.0/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
     // ajax fetch request
     fetch(url)
       .then((response) => response.json())
@@ -44,9 +44,7 @@ function weather() {
         //   icon = `assets/lightWeatherIcons/${data.weather[0]["icon"]}.svg`;
         // if (themeStyle == "dark_theme.css")
         //   icon = `assets/darkWeatherIcons/${data.weather[0]["icon"]}.svg`;
-        document.getElementById(
-          "icon"
-        ).innerHTML = `<img src=${icon} alt=${data.weather[0]["main"]} id="changeIcon"></img>`;
+        document.getElementById("icon").src = icon;
       })
       .catch(() => {
         // on error, print msg to console
@@ -57,6 +55,6 @@ function weather() {
   navigator.geolocation.getCurrentPosition(success, error, options);
 }
 
-// run weather function every 30 seconds after initial run, default to fahrenheit
+// run weather function every 10 minutes after initial run, default to fahrenheit
 weather();
-setInterval(weather, 30000);
+setInterval(weather, 600000);
