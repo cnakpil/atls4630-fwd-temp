@@ -72,3 +72,9 @@ I think the best way to go about learning the things I need to learn is to add o
 As long as I break the project down into smaller bits, it is less likely to overwhelm me. But I should also take the time to acknowledge that it's a large project for me to take on.
 
 I am optimistic that I can get what I've planned done. But if I have to reduce the number of features, it won't be the end of the world.
+
+## Research Resources
+
+- [TypeScript node documentation](https://github.com/cnakpil/atls4630-fwd/blob/main/documentation/project1/milestone2.md)
+- [Firebase to-do list example](https://dev.to/lada496/to-do-list-with-firebase-web-ver9-hd8)
+- [JS to-do list w/ nodes](https://codepen.io/franklynroth/pen/ZYeaBd)
