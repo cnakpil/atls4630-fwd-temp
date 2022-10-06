@@ -24,7 +24,7 @@ Create a to-do list with persistent to-do items. Mostly inspired by other online
 
 ## Final Design
 
-I realized as I got started, I had forgotten to plan out what the page would look like with no to-do items - the initial appearance of the to-do app.
+I realized as I got started, I had forgotten to plan out what the page would look like with no to-do items - the initial appearance of the to-do app. Therefore, I whipped one up to match the irreverent style of the whole project.
 
 ### Light
 
