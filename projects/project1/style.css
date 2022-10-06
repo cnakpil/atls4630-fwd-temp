@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+html {
+    --color-text: #313131;
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 9vw;
+}
+
+p,
+input {
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    padding-top: 10vw;
+    padding-bottom: 3vw;
+}
+
+/* main {
+
+    background-color: aqua;
+} */
+
+input[type=text] {
+    border: .2rem solid #313131;
+    border-radius: .30rem;
+    padding: .5rem .5rem .5rem .5rem;
+    width: 50vw;
+}
+
+input[type=text]::placeholder {
+    color: #313131;
+    opacity: 1;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
