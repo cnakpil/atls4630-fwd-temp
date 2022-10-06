@@ -1,5 +1,7 @@
 # Project 1, Milestone 1 - Proposal
 
+[NEXT MILESTONE](milestone2.md)
+
 ## Proposal
 
 Create a to-do list with persistent to-do items. Mostly inspired by other online to-do apps like Google Keep. Intended audience is anyone who uses an online app to keep track of things they need to do. All function will be run through JS/TypeScript.
