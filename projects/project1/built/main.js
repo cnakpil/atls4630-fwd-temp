@@ -1,5 +1,5 @@
-var fillStatus;
-fillStatus = document.querySelector(".wrapper").getAttribute("fill-status");
+var fillStatus = document.querySelector(".wrapper").getAttribute("fill-status");
+var formInput = document.querySelector(".todo-input");
 console.log(fillStatus);
 // To-do item class to contain information in each list item
 var Todo = /** @class */ (function () {
