@@ -45,14 +45,14 @@ header {
 } */
 
 input[type=text] {
-    border: .2rem solid #313131;
+    border: .2rem solid var(--color-text);
     border-radius: .30rem;
     padding: .5rem .5rem .5rem .5rem;
     width: 50vw;
 }
 
 input[type=text]::placeholder {
-    color: #313131;
+    color: var(--color-text);
     opacity: 1;
 }
 
@@ -62,4 +62,8 @@ input:focus {
 
 input:focus::placeholder {
     color: transparent;
+}
+
+button {
+    color: var(--color-text);
 }
