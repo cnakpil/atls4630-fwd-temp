@@ -1,5 +1,6 @@
-let fillStatus: string;
-fillStatus = document.querySelector(".wrapper").getAttribute("fill-status");
+let fillStatus: string = document.querySelector(".wrapper").getAttribute("fill-status");
+var formInput: Element = document.querySelector(".todo-input");
+
 console.log(fillStatus);
 
 // To-do item class to contain information in each list item
@@ -17,7 +18,7 @@ class Todo {
 
 let todoItems: Array<Todo>;
 
-function addTodo(input) {
+function addTodo(input: string) {
     todoItems.push(new Todo(
         input,
         false,
