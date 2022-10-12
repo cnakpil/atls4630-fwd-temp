@@ -1,3 +1,8 @@
+// import firebase
+import { app } from "./app.js";
+import { db } from "./app.js"
+/*************************************************************************************** */
+
 let fillStatus: string = document.querySelector(".wrapper").getAttribute("fill-status");
 var formInput: Element = document.querySelector(".todo-input");
 
