@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-app.js";
-import { getDatabase, set, ref, remove, push } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-database.js";
+import { getDatabase, set, ref, remove, push, onValue, val, get, exists, child } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-database.js";
+// let noteText = "";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBY_-N52LuC1ADir4S_h8Jlg422X5xijzU",
@@ -30,12 +31,26 @@ export function writeNoteData(text) {
     return newNote.key;
 }
 
-export function deleteNoteData(noteNum) {
-    remove(db, `notes/${noteNum}`);
+export function readNoteText(noteId) {
+    console.log(get(db, `notes/${noteId}`));
+    // let text = get(db, `notes/${noteId}/text`);
+    // const noteText = () => {
+
+    // onValue(ref(db, `notes/${noteId}/text`), (snapshot) => {
+    //     noteText = snapshot.val();
+    //     return noteText;
+    // })
+    // }
+    // console.log(noteText);
+
 }
 
-export function updateNoteData(updateText, noteNum) {
-    set(ref(db, `notes/${noteNum}`), {
+export function deleteNoteData(noteId) {
+    remove(db, `notes/${noteId}`);
+}
+
+export function updateNoteData(updateText, noteId) {
+    set(ref(db, `notes/${noteId}`), {
         updateText
     });
 }

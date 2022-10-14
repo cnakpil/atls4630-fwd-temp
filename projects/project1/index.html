@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8" X-Content-Type-Options="nosniff"> -->
+    <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DO STUFF</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="built/app.js"></script>
+    <!-- <script type="module" src="built/app.js"></script> -->
     <script type="module" src="built/main.js"></script>
 </head>
 
@@ -18,7 +19,7 @@
         </header>
         <main class="wrapper">
             <div class="todo">
-                <div id="test" class="todo-item">
+                <!-- <div id="test" class="todo-item">
                     <div class="text-area">
                         <p class="todo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut
@@ -41,10 +42,11 @@
                         </div>
                     </div>
                     <img src="assets/trash.svg" alt="trash icon" class="delete">
-                </div>
+                </div> -->
             </div>
             <form>
-                <input type="text" aria-label="Enter a new todo item" placeholder="DO SOMETHING +" class="todo-input">
+                <input required type="text" aria-label="Enter a new todo item" placeholder="DO SOMETHING +"
+                    class="todo-input">
                 <!-- <button type="submit">+</button> -->
             </form>
         </main>
