@@ -15,11 +15,13 @@ const db = getDatabase();
 const dbRef = ref(db);
 var todoDiv = document.querySelector(".todo");
 function newDiv(dataReturned, key, status) {
+    let statusText = "";
+    status ? statusText = "DID IT" : statusText = "DO IT";
     todoDiv.innerHTML += `<div class="todo-item ${key} ${status}">
                             <div class="text-area">
                                 <p class="todo-text ${key}">${dataReturned[key].text}</p>
                                 <div class="status ${key}">
-                                    <h3>DO IT</h3>
+                                    <h3>${statusText}</h3>
                                 </div>
                             </div>
                             <img src="assets/trash.svg" alt="trash icon" class="delete ${key}">
@@ -79,7 +81,7 @@ export function getNotes() {
 export function statusSwap(noteId) {
     var notesRef = ref(db, `notes/${noteId}`);
     let todoItem = document.querySelector(`.todo-item.${noteId}`);
-    let status = document.querySelector(`.status.${noteId}`);
+    let statusElement = document.querySelector(`.status.${noteId}`);
     get(child(dbRef, `notes/`))
         .then((snapshot) => {
         if (snapshot.exists()) {
@@ -90,6 +92,7 @@ export function statusSwap(noteId) {
                     done: false
                 });
                 todoItem.classList.replace("true", "false");
+                statusElement.innerHTML = "<h3>DO IT</h3>";
             }
             else {
                 set(notesRef, {
@@ -97,6 +100,7 @@ export function statusSwap(noteId) {
                     done: true
                 });
                 todoItem.classList.replace("false", "true");
+                statusElement.innerHTML = "<h3>DID IT</h3>";
             }
         }
         else {
@@ -145,63 +149,3 @@ function styleSwap() {
         console.error(error);
     });
 }
-//  Testing ground
-// writeNoteData("I need to not eat sushi");
-// console.log(getData());
-// import { initializeApp } from "firebase/app";
-// import { getDatabase, ref, child, get, push, set } from "firebase/database";
-// // let noteText = "";
-// const firebaseConfig = {
-//     apiKey: "AIzaSyBY_-N52LuC1ADir4S_h8Jlg422X5xijzU",
-//     authDomain: "whatdo-a5baa.firebaseapp.com",
-//     projectId: "whatdo-a5baa",
-//     storageBucket: "whatdo-a5baa.appspot.com",
-//     messagingSenderId: "1007179620472",
-//     appId: "1:1007179620472:web:a325f90b911a5173f2cd8d",
-//     databaseURL: "https://whatdo-a5baa-default-rtdb.firebaseio.com/"
-// };
-// const app = initializeApp(firebaseConfig);
-// const db = getDatabase();
-// const dbRef = ref(db);
-// // Write data to database
-// export function writeNoteData(text) {
-//     var notesListRef = ref(db, 'notes');
-//     var newNote = push(notesListRef);
-//     set(newNote, {
-//         text: text,
-//         done: false
-//     });
-//     console.log("new data added");
-//     return newNote.key;
-// }
-// // Get data from database
-// export function getData() {
-//     let allTodo = [];
-//     get(child(dbRef, `notes/`))
-//         .then((snapshot) => {
-//             if (snapshot.exists()) {
-//                 let dataReturned = snapshot.val();
-//                 for (let key in dataReturned) {
-//                     allTodo.push(dataReturned[key].text);
-//                 }
-//                 console.log(allTodo);
-//             } else {
-//                 console.log("No data available");
-//             }
-//         })
-//         .catch((error) => {
-//             console.error(error);
-//         });
-//     return allTodo;
-// }
-// export function deleteNoteData(noteId) {
-//     remove(db, `notes/${noteId}`);
-// }
-// export function updateNoteData(updateText, noteId) {
-//     set(ref(db, `notes/${noteId}`), {
-//         updateText
-//     });
-// }
-// getData();
-// // export const app = initializeApp(firebaseConfig);
-// // export const db = getDatabase(app);
