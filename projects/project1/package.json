@@ -1,0 +1,14 @@
+{
+  "name": "whatdo",
+  "version": "1.0.0",
+  "description": "FWD",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start"
+  },
+  "dependencies": {
+    "firebase": "^9.12.1"
+  }
+}
