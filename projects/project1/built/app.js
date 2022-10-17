@@ -15,10 +15,10 @@ const db = getDatabase();
 const dbRef = ref(db);
 var todoDiv = document.querySelector(".todo");
 function newDiv(dataReturned, key, status) {
-    todoDiv.innerHTML += `<div class="todo-item ${key}">
+    todoDiv.innerHTML += `<div class="todo-item ${key} ${status}">
                             <div class="text-area">
                                 <p class="todo-text ${key}">${dataReturned[key].text}</p>
-                                <div class="status ${key} ${status}">
+                                <div class="status ${key}">
                                     <h3>DO IT</h3>
                                 </div>
                             </div>
@@ -39,25 +39,25 @@ function newDiv(dataReturned, key, status) {
     for (let i = 0; i < statusButton.length; i++) {
         statusButton[i].addEventListener('click', () => {
             let id = statusButton[i].classList[1];
-            let status = [];
-            status = getStatus(id);
-            console.log(status);
-            // console.log(status.);
-            // status[0] ? swapStatus(key, true) : swapStatus(key, false);
+            statusSwap(id);
         });
     }
 }
 //  Get data 
 export function getNotes() {
     let allTodo = [];
+    var headerElement = document.querySelector("header");
+    var wrapperElement = document.querySelector(".wrapper");
     get(child(dbRef, `notes/`))
         .then((snapshot) => {
         if (snapshot.exists()) {
+            headerElement.innerHTML = "<h5>F***ING DO IT</h5>";
+            wrapperElement.setAttribute("fill-status", true);
             let dataReturned = snapshot.val();
             for (let key in dataReturned) {
                 allTodo.push(dataReturned[key].text);
                 console.log("testing status key " + dataReturned[key].done);
-                dataReturned[key.done]
+                dataReturned[key].done
                     ? newDiv(dataReturned, key, true)
                     : newDiv(dataReturned, key, false);
             }
@@ -65,6 +65,8 @@ export function getNotes() {
         }
         else {
             console.log("No data available");
+            headerElement.innerHTML = "<h5>WHAT DO?</h5>";
+            wrapperElement.setAttribute("fill-status", false);
         }
     })
         .catch((error) => {
@@ -73,33 +75,29 @@ export function getNotes() {
     // console.log(allTodo);
     return allTodo;
 }
-// Get note status attribute, return status as boolean
-export function getStatus(noteId) {
+// Swap "done" property to opposite state
+export function statusSwap(noteId) {
     var notesRef = ref(db, `notes/${noteId}`);
-    // let status = [];
-    let status = "";
-    // let statusButton = querySelector(`.status.${noteId}`);
+    let todoItem = document.querySelector(`.todo-item.${noteId}`);
+    let status = document.querySelector(`.status.${noteId}`);
     get(child(dbRef, `notes/`))
         .then((snapshot) => {
         if (snapshot.exists()) {
             let dataReturned = snapshot.val();
             if (dataReturned[noteId].done) {
-                // status.push("true");
-                status = "true";
                 set(notesRef, {
                     text: dataReturned[noteId].text,
                     done: false
                 });
+                todoItem.classList.replace("true", "false");
             }
             else {
-                // status.push("false");
-                status = "false";
                 set(notesRef, {
                     text: dataReturned[noteId].text,
                     done: true
                 });
+                todoItem.classList.replace("false", "true");
             }
-            // status.push(dataReturned[noteId].done);
         }
         else {
             console.log("No data available");
@@ -108,39 +106,7 @@ export function getStatus(noteId) {
         .catch((error) => {
         console.error(error);
     });
-    // console.log(status);
-    // return status;
 }
-// export function swapStatus(noteId, status) {
-//     var notesRef = ref(db, `notes/${noteId}`);
-//     // var newNote = push(notesListRef); get(child(dbRef, `notes/`))
-//     // update(child(db, `notes/${noteId}`), {
-//     //     done: true
-//     // })
-//     var notesListRef = ref(db, "notes");
-//     var newNote = push(notesListRef);
-//     set(newNote, {
-//         text: text,
-//         done: false,
-//     });
-//     // console.log("run swap");
-//     // var notesRef = ref(db, `notes/${noteId}`);
-//     // console.log(notesRef);
-//     // var notesRef = db.ref(`notes/${noteId}`);
-//     // console.log("current status: " + currentStatus);
-//     // if (currentStatus) {
-//     //     update(notesRef, { done: false });
-//     //     // notesRef.update({
-//     //     //     done: false
-//     //     // })
-//     // } else {
-//     //     update(notesRef, { done: true });
-//     //     // notesRef.update({
-//     //     //     done: true
-//     //     // })
-//     // }
-//     // // console.log(getStatus());
-// }
 //  Write new notes to database, returns the new node key as a string
 export function writeNote(text) {
     var notesListRef = ref(db, "notes");
@@ -150,12 +116,34 @@ export function writeNote(text) {
         done: false,
     });
     console.log("New data added");
+    styleSwap();
     return newNote.key;
 }
 // delete specified note from database
 export function deleteNote(noteId) {
     var notesRef = ref(db, `notes/${noteId}`);
     set(notesRef, null);
+    styleSwap();
+}
+// fix appearance for use cases
+function styleSwap() {
+    var headerElement = document.querySelector("header");
+    var wrapperElement = document.querySelector(".wrapper");
+    get(child(dbRef, `notes/`))
+        .then((snapshot) => {
+        if (snapshot.exists()) {
+            headerElement.innerHTML = "<h5>F***ING DO IT</h5>";
+            wrapperElement.setAttribute("fill-status", true);
+        }
+        else {
+            console.log("No data available");
+            headerElement.innerHTML = "<h5>WHAT DO?</h5>";
+            wrapperElement.setAttribute("fill-status", false);
+        }
+    })
+        .catch((error) => {
+        console.error(error);
+    });
 }
 //  Testing ground
 // writeNoteData("I need to not eat sushi");

@@ -1,5 +1,5 @@
 // import firebase functions
-import { writeNote, getNotes, deleteNote, getStatus } from "./app.js";
+import { writeNote, getNotes, deleteNote, statusSwap } from "./app.js";
 let fillStatus = document.querySelector(".wrapper").getAttribute("fill-status");
 var form = document.querySelector("form");
 var todoDiv = document.querySelector(".todo");
@@ -10,16 +10,18 @@ var length = priorTodo.length;
 console.log(length);
 // On form submission, input note text to the database and add a new todo item
 form.addEventListener('submit', (event) => {
+    var headerElement = document.querySelector("header");
+    headerElement.innerHTML = "F***ING DO IT";
     event.preventDefault();
     var formInput = document.querySelector(".todo-input");
     let inputValue = formInput.value;
     console.log(inputValue);
     let newID = writeNote(inputValue);
     console.log(newID);
-    todoDiv.innerHTML += `<div class="todo-item ${newID}">
+    todoDiv.innerHTML += `<div class="todo-item ${newID} false">
                             <div class="text-area">
                                 <p class="todo-text ${newID}">${inputValue}</p>
-                                <div class="status ${newID} false">
+                                <div class="status ${newID}">
                                     <h3>DO IT</h3>
                                 </div>
                             </div>
@@ -40,22 +42,22 @@ form.addEventListener('submit', (event) => {
     for (let i = 0; i < statusButton.length; i++) {
         statusButton[i].addEventListener('click', () => {
             let id = statusButton[i].classList[1];
-            getStatus(id);
-            // console.log(getStatus(id));
-            // console.log("main.ts status " + status);
-            // swapStatus(id);
+            statusSwap(id);
         });
     }
     form.reset();
 });
 // To-do item class to contain information in each list item, no Firebase
-class Todo {
-    constructor(id, text, done) {
-        this.id = id;
-        this.text = text;
-        this.done = done;
-    }
-}
+// class Todo {
+//     id: string;
+//     text: string;
+//     done: boolean;
+//     constructor(id: string, text: string, done: boolean) {
+//         this.id = id;
+//         this.text = text;
+//         this.done = done;
+//     }
+// }
 // let todoItems: Array<Todo>;
 // function addTodo(input: string) {
 //     todoItems.push(new Todo(

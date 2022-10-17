@@ -71,6 +71,7 @@ input[type=text] {
     padding: .5rem .5rem .5rem .5rem;
     width: 50vw;
     margin-top: 1.5vw;
+    margin-bottom: 3vw;
 }
 
 input[type=text]::placeholder {
@@ -101,6 +102,14 @@ button {
     min-width: 315px;
     position: relative;
     left: 1.35vw;
+}
+
+.todo-item.false {
+    background-color: red;
+}
+
+.todo-item.true {
+    background-color: green;
 }
 
 .text-area p {

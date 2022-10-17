@@ -13,6 +13,8 @@ console.log(length);
 
 // On form submission, input note text to the database and add a new todo item
 form.addEventListener('submit', (event) => {
+    var headerElement: Element = document.querySelector("header");
+    headerElement.innerHTML = "F***ING DO IT";
     event.preventDefault();
     var formInput: HTMLInputElement = document.querySelector(".todo-input");
     let inputValue: string = formInput.value;
@@ -21,10 +23,10 @@ form.addEventListener('submit', (event) => {
     let newID: string = writeNote(inputValue);
     console.log(newID);
 
-    todoDiv.innerHTML += `<div class="todo-item ${newID}">
+    todoDiv.innerHTML += `<div class="todo-item ${newID} false">
                             <div class="text-area">
                                 <p class="todo-text ${newID}">${inputValue}</p>
-                                <div class="status ${newID} false">
+                                <div class="status ${newID}">
                                     <h3>DO IT</h3>
                                 </div>
                             </div>
