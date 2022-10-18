@@ -3,11 +3,6 @@ import { writeNote } from "./app.js";
 let fillStatus = document.querySelector(".wrapper").getAttribute("fill-status");
 var form = document.querySelector("form");
 var todoDiv = document.querySelector(".todo");
-// var priorTodo = [];
-// priorTodo = getNotes();
-// console.log(priorTodo);
-// var length: number = priorTodo.length;
-// console.log(length);
 // On form submission, input note text to the database and add a new todo item
 form.addEventListener('submit', (event) => {
     var headerElement = document.querySelector("header");

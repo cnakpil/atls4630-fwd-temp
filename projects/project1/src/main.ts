@@ -4,12 +4,6 @@ import { writeNote, getNotes, deleteNote, statusSwap } from "./app.js"
 let fillStatus: string = document.querySelector(".wrapper").getAttribute("fill-status");
 var form: HTMLFormElement = document.querySelector("form");
 var todoDiv: Element = document.querySelector(".todo");
-// var priorTodo = [];
-// priorTodo = getNotes();
-// console.log(priorTodo);
-// var length: number = priorTodo.length;
-// console.log(length);
-
 
 // On form submission, input note text to the database and add a new todo item
 form.addEventListener('submit', (event) => {

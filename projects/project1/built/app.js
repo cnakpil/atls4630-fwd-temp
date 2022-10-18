@@ -14,10 +14,12 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase();
 const dbRef = ref(db);
 var todoDiv = document.querySelector(".todo");
+// watch the database for changes. On change, run getNotes function. This could all be one function, 
+// but this aspect is being gerry-rigged after the fact.
 onValue(dbRef, (snapshot) => {
-    // const data = snapshot.val();
     getNotes();
 });
+// create data in new div
 function newDiv(dataReturned, key, status) {
     let statusText = "";
     status ? statusText = "DID IT" : statusText = "DO IT";
@@ -30,6 +32,7 @@ function newDiv(dataReturned, key, status) {
                             </div>
                             <img src="assets/trash.svg" alt="trash icon" class="delete ${key}">
                         </div>`;
+    // set event listener actions for delete button
     let trashCan = document.querySelectorAll(".delete");
     for (let i = 0; i < trashCan.length; i++) {
         trashCan[i].addEventListener("click", () => {
@@ -41,6 +44,7 @@ function newDiv(dataReturned, key, status) {
             });
         });
     }
+    // event listener for all status buttons
     let statusButton = document.querySelectorAll(".status");
     for (let i = 0; i < statusButton.length; i++) {
         statusButton[i].addEventListener('click', () => {
