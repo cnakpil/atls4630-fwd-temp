@@ -13,7 +13,7 @@ html {
     --color-text: #313131;
     --todo-text-color: #fff;
     --todo-bg-color: var(--color-text);
-    --status-hover-color: #90EE90;
+    --status-hover-color: #fe019a;
 }
 
 h3 {
@@ -72,6 +72,7 @@ input[type=text] {
     width: 50vw;
     margin-top: 1.5vw;
     margin-bottom: 3vw;
+    overflow-wrap: break-word;
 }
 
 input[type=text]::placeholder {
@@ -104,18 +105,11 @@ button {
     left: 1.35vw;
 }
 
-.todo-item.false {
-    background-color: red;
-}
-
-.todo-item.true {
-    background-color: green;
-}
-
 .text-area p {
     padding: 1vw 1.5vw;
     margin: 0;
-    width: 100%;
+    width: 82%;
+    overflow-wrap: break-word;
 }
 
 .text-area {
@@ -130,6 +124,48 @@ button {
     margin-right: 1vw;
 }
 
+.status {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: calc(2px + .1vw) solid var(--color-text); */
+    border-left: calc(2px + .1vw) solid var(--color-text);
+    background-color: var(--todo-bg-color);
+    border-radius: 0 .75vw .75vw 0;
+    padding: 0vw 1.5vw;
+    min-height: 100%;
+    /* width: 100%; */
+    /* max-width: fit-content; */
+    /* width: 10vw; */
+    transition: .15s ease-in-out;
+}
+
+.status:hover {
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.false .status {
+    color: var(--todo-text-color);
+    background-color: var(--color-text);
+}
+
+.true .status {
+    color: var(--color-text);
+    background-color: var(--todo-text-color);
+}
+
+.false .status:hover {
+    color: var(--color-text);
+    background-color: var(--todo-text-color);
+}
+
+.true .status:hover {
+    color: var(--todo-text-color);
+    background-color: var(--color-text);
+}
+
 .delete {
     width: 1.75vw;
     transition: .15s ease-in-out;
@@ -138,23 +174,5 @@ button {
 .delete:hover {
     cursor: pointer;
     transform: scale(1.15);
-}
 
-.status {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--todo-text-color);
-    background-color: var(--todo-bg-color);
-    border-radius: 0 .78vw .78vw 0;
-    padding: 0vw 1.5vw;
-    min-height: 100%;
-    max-width: fit-content;
-    transition: .15s ease-in-out;
-}
-
-.status:hover {
-    cursor: pointer;
-    color: var(--status-hover-color);
 }
