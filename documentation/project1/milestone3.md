@@ -29,6 +29,12 @@ Complete the HTML and CSS code. App landing page will be visible, but there is n
 
 ---
 
+## TypeScript
+
 ## Struggles with Firebase
 
+### TypeScript + Firebase Compatibility
 
+### Async Issues
+
+## Last bit of design
