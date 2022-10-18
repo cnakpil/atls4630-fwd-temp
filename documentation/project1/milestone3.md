@@ -1,4 +1,4 @@
-# Project 1, Milestone 3 - WIP Check-in
+# Project 1, Milestone 3 - MVP Product + Critique Day
 
 [PREVIOUS MILESTONE](milestone2.md)
 
@@ -16,11 +16,6 @@ Create a to-do list with persistent to-do items. Mostly inspired by other online
 - [x] Visuals according to proposed wireframes
 - [x] Basic responsiveness
 
-## Known Bugs
-
-- Mobile responsiveness is incomplete
-- "Completed" Todo state could be better designed
-
 ## Stretch Goals
 
 - [x] Change header depending on page content
@@ -29,12 +24,19 @@ Create a to-do list with persistent to-do items. Mostly inspired by other online
 - [ ] Improve user experience by moving completed to-do items to the bottom of the page
 - [ ] Improve responsive layout
 - [ ] Add animations for funsies
+- [ ] Add user authentication using Firebase authentication
+
+## Known Bugs
+
+- Mobile responsiveness is incomplete
+- "Completed" Todo state could be better designed
+- Trash can emoji gets too small on mobile screens
 
 ---
 
 ## TypeScript
 
-Learning TypeSc was a really easy switch, actually! The installation of TypeScript went smoothly. Typing all variables and compiling my code forced me to get super clean about my coding choices. I will likely use TypeScript for all my future assignments.
+Learning TypeScript was an easy switch, actually! The installation of TypeScript went smoothly. Typing all variables and compiling my code forced me to get super clean about my coding choices. I will likely use TypeScript for all my future assignments.
 
 ## Struggles with Firebase
 
@@ -51,4 +53,14 @@ Ran into typical async issues where if I could access the database data, I would
 
 ## Last bit of design
 
-At some point, I realized that I was gonna have to figure out what to do items looked like after marking them complete or not. Will add design screenshot. 
+At some point, I realized that I was gonna have to figure out what to do items looked like after marking them complete or not. Will add design screenshot.
+
+---
+
+## Resources
+
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [Firebase Realtime Database Documentation](https://firebase.google.com/docs/database)
+- [Vanilla/Local Storage Todo App](https://freshman.tech/todo-list/)
+- [React/Firebase/Authentication Todo App](https://dev.to/lada496/to-do-list-with-firebase-web-ver9-hd8)
+- [TypeScript/Firebase/React Todo App](https://www.sipios.com/blog-tech/build-a-real-time-todo-app-in-30-minutes-with-reactjs-typescript-and-firebase)
