@@ -58,11 +58,14 @@ export function getNotes() {
     let allTodo = [];
     var headerElement = document.querySelector("header");
     var wrapperElement = document.querySelector(".wrapper");
+    var inputElement = document.querySelector("input");
+
     get(child(dbRef, `notes/`))
         .then((snapshot) => {
             if (snapshot.exists()) {
                 headerElement.innerHTML = "<h5>F***ING DO IT</h5>";
                 wrapperElement.setAttribute("fill-status", true);
+                inputElement.setAttribute("placeholder", "DO MORE +");
                 let dataReturned = snapshot.val();
                 for (let key in dataReturned) {
                     allTodo.push(dataReturned[key].text);
@@ -119,7 +122,7 @@ export function statusSwap(noteId) {
         });
 }
 
-//  Write new notes to database, returns the new node key as a string
+//  Write new notes to database, returns the new node key as a string. Check style
 export function writeNote(text) {
     var notesListRef = ref(db, "notes");
     var newNote = push(notesListRef);
@@ -132,7 +135,7 @@ export function writeNote(text) {
     return newNote.key;
 }
 
-// delete specified note from database
+// delete specified note from database, check style 
 export function deleteNote(noteId) {
     var notesRef = ref(db, `notes/${noteId}`);
     set(notesRef, null);
@@ -141,17 +144,23 @@ export function deleteNote(noteId) {
 
 // fix appearance for use cases
 function styleSwap() {
+    // Get elements
     var headerElement = document.querySelector("header");
     var wrapperElement = document.querySelector(".wrapper");
+    var inputElement = document.querySelector("input");
+
+    // See if database is empty
     get(child(dbRef, `notes/`))
         .then((snapshot) => {
-            if (snapshot.exists()) {
+            if (snapshot.exists()) { // if has stuff
                 headerElement.innerHTML = "<h5>F***ING DO IT</h5>"
                 wrapperElement.setAttribute("fill-status", true);
-            } else {
+                inputElement.setAttribute("placeholder", "DO MORE +");
+            } else { // if no stuff
                 console.log("No data available");
                 headerElement.innerHTML = "<h5>WHAT DO?</h5>"
                 wrapperElement.setAttribute("fill-status", false);
+                inputElement.setAttribute("placeholder", "DO SOMETHING +");
             }
         })
         .catch((error) => {

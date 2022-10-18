@@ -23,6 +23,10 @@ form.addEventListener('submit', (event) => {
     let newID: string = writeNote(inputValue);
     console.log(newID);
 
+    // Change placeholder text
+    var inputElement = document.querySelector("input");
+    inputElement.setAttribute("placeholder", "DO MORE +");
+
     todoDiv.innerHTML += `<div class="todo-item ${newID} false">
                             <div class="text-area">
                                 <p class="todo-text ${newID}">${inputValue}</p>
