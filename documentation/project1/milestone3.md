@@ -16,16 +16,18 @@ Create a to-do list with persistent to-do items. Mostly inspired by other online
 - [x] Visuals according to proposed wireframes
 - [x] Basic responsiveness
 
-## Stretch Goals
+## Known Bugs
 
-Complete the HTML and CSS code. App landing page will be visible, but there is no function yet.
+- Mobile responsiveness is incomplete
+
+## Stretch Goals
 
 - [x] Change header depending on page content
 - [x] Change appearance of todo items on completion
 - [ ] Scroll to input box after entering a new todo
 - [ ] Improve user experience by moving completed to-do items to the bottom of the page
 - [ ] Improve responsive layout
-- [ ] Add animations to make page UX better
+- [ ] Add animations for funsies
 
 ---
 
