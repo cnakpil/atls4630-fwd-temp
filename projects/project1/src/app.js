@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-import { getDatabase, ref, child, get, push, set, update } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
+import { getDatabase, ref, child, get, push, set, onValue } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
 
 //  Initialize
 const firebaseConfig = {
@@ -16,6 +16,11 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase();
 const dbRef = ref(db);
 var todoDiv = document.querySelector(".todo");
+
+onValue(dbRef, (snapshot) => {
+    // const data = snapshot.val();
+    getNotes();
+});
 
 function newDiv(dataReturned, key, status) {
     let statusText = "";
