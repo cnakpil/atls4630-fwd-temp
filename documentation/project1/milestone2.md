@@ -1,6 +1,7 @@
 # Project 1, Milestone 2 - WIP Check-in
 
 [PREVIOUS MILESTONE](milestone1.md)
+
 [NEXT MILESTONE](milestone3.md)
 
 [LIVE DEMO](https://atls4630-fwd.vercel.app/projects/project1/index.html)
