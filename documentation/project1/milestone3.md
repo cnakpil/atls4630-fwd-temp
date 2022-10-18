@@ -20,7 +20,7 @@ Create a to-do list with persistent to-do items. Mostly inspired by other online
 
 - [x] Change header depending on page content
 - [x] Change appearance of todo items on completion
-- [ ] Populate from database every time something new is added instead of doing it locally so that multiple users can input new notes at the same time
+- [x] Populate from database every time something new is added instead of doing it locally so that multiple users can input new notes at the same time - deadass fixed this in class using the onvalue function
 - [ ] Scroll to input box after entering a new todo
 - [ ] Improve user experience by moving completed to-do items to the bottom of the page
 - [ ] Improve responsive layout
@@ -29,7 +29,6 @@ Create a to-do list with persistent to-do items. Mostly inspired by other online
 
 ## Known Bugs
 
-- Does not update when multiple users interact with to-do list
 - Mobile responsiveness is incomplete
 - "Completed" Todo state could be better designed
 - Trash can emoji gets too small on mobile screens
