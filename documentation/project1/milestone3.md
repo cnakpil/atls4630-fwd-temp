@@ -19,6 +19,7 @@ Create a to-do list with persistent to-do items. Mostly inspired by other online
 ## Known Bugs
 
 - Mobile responsiveness is incomplete
+- "Completed" Todo state could be better designed
 
 ## Stretch Goals
 
@@ -33,10 +34,21 @@ Create a to-do list with persistent to-do items. Mostly inspired by other online
 
 ## TypeScript
 
+Learning TypeSc was a really easy switch, actually! The installation of TypeScript went smoothly. Typing all variables and compiling my code forced me to get super clean about my coding choices. I will likely use TypeScript for all my future assignments.
+
 ## Struggles with Firebase
+
+In principle, using a database sounds excellent, a natural extension of learning API services. I don't think I knew enough about either TypeScript or API promises and that made this a struggle.
 
 ### TypeScript + Firebase Compatibility
 
+So for some reason, I couldn't get firebase to be happy importing from node_modules in my file system as it would consistently return a type error of sorts. I eventually had to switch back to vanilla js and use the firebase static SDK links to import firebase instead. This means that my script split into a hilarious combination of an app.js that exported several necessary functions to my ts file. Arguably, I could have just dropped TypeScript at the point and just done the whole project in JS, but here we are.
+By the barest of technicalities, I'm using TypeScript! I'll revisit once I learn more about tools like webpack and see if I can solve the import/sdk link issues in the future.
+
 ### Async Issues
 
+Ran into typical async issues where if I could access the database data, I would only be able to do it at specific times in the code - namely in the get() function of my app.js. All attempts to export and manipulate data failed miserably, and I still have no idea why other than that they were probably async function issues. So solution: if I can't get the information out of the function, then I'll import the HTML elements in! It works, but I'm a little peeved that I couldn't get the original idea to work.
+
 ## Last bit of design
+
+At some point, I realized that I was gonna have to figure out what to do items looked like after marking them complete or not. Will add design screenshot. 
