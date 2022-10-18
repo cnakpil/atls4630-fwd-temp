@@ -1,4 +1,4 @@
-# Project 1, Milestone 2 - WIP Check-in
+# Project 1, Milestone 3 - WIP Check-in
 
 [PREVIOUS MILESTONE](milestone2.md)
 
@@ -12,6 +12,7 @@ Create a to-do list with persistent to-do items. Mostly inspired by other online
 
 - [x] Save data to Firebase
 - [x] Delete data from Firebase
+- [x] Load data from Firebase
 - [x] Visuals according to proposed wireframes
 - [x] Basic responsiveness
 
@@ -21,6 +22,7 @@ Complete the HTML and CSS code. App landing page will be visible, but there is n
 
 - [x] Change header depending on page content
 - [x] Change appearance of todo items on completion
+- [ ] Scroll to input box after entering a new todo
 - [ ] Improve user experience by moving completed to-do items to the bottom of the page
 - [ ] Improve responsive layout
 - [ ] Add animations to make page UX better
@@ -28,3 +30,5 @@ Complete the HTML and CSS code. App landing page will be visible, but there is n
 ---
 
 ## Struggles with Firebase
+
+
