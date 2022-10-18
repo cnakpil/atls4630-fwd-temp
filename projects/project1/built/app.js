@@ -15,7 +15,7 @@ const db = getDatabase();
 const dbRef = ref(db);
 var todoDiv = document.querySelector(".todo");
 // watch the database for changes. On change, run getNotes function. This could all be one function, 
-// but this aspect is being gerry-rigged after the fact.
+// but this aspect is being gerry-rigged in after the fact so yolo.
 onValue(dbRef, (snapshot) => {
     getNotes();
 });
