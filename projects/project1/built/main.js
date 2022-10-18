@@ -21,6 +21,8 @@ form.addEventListener('submit', (event) => {
     // Change placeholder text
     var inputElement = document.querySelector("input");
     inputElement.setAttribute("placeholder", "DO MORE +");
+    // Reset form
+    form.reset();
     // getNotes();
     // todoDiv.innerHTML += `<div class="todo-item ${newID} false">
     //                         <div class="text-area">
@@ -49,7 +51,6 @@ form.addEventListener('submit', (event) => {
     //         statusSwap(id);
     //     })
     // }
-    // form.reset();
 });
 // To-do item class to contain information in each list item, no Firebase
 // class Todo {

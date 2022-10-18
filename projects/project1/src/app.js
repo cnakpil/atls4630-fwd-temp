@@ -63,6 +63,7 @@ export function getNotes() {
     var headerElement = document.querySelector("header");
     var wrapperElement = document.querySelector(".wrapper");
     var inputElement = document.querySelector("input");
+    var todoElement = document.querySelector(".todo");
 
     get(child(dbRef, `notes/`))
         .then((snapshot) => {
@@ -70,6 +71,7 @@ export function getNotes() {
                 headerElement.innerHTML = "<h5>F***ING DO IT</h5>";
                 wrapperElement.setAttribute("fill-status", true);
                 inputElement.setAttribute("placeholder", "DO MORE +");
+                todoElement.innerHTML = "";
                 let dataReturned = snapshot.val();
                 for (let key in dataReturned) {
                     allTodo.push(dataReturned[key].text);
