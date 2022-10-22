@@ -3,13 +3,13 @@ import { getDatabase, ref, child, get, push, set, onValue } from "https://www.gs
 
 //  Initialize
 const firebaseConfig = {
-    apiKey: "AIzaSyBY_-N52LuC1ADir4S_h8Jlg422X5xijzU",
-    authDomain: "whatdo-a5baa.firebaseapp.com",
-    projectId: "whatdo-a5baa",
-    storageBucket: "whatdo-a5baa.appspot.com",
-    messagingSenderId: "1007179620472",
-    appId: "1:1007179620472:web:a325f90b911a5173f2cd8d",
-    databaseURL: "https://whatdo-a5baa-default-rtdb.firebaseio.com/",
+    apiKey: "AIzaSyDNh4RLprHRvZMNDHNIphtgx_T4zm__YwQ",
+    authDomain: "whatdov2.firebaseapp.com",
+    projectId: "whatdov2",
+    storageBucket: "whatdov2.appspot.com",
+    messagingSenderId: "962169183045",
+    appId: "1:962169183045:web:9420679e4468e0c589bc2c",
+    databaseURL: "https://whatdov2-default-rtdb.firebaseio.com/",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -31,16 +31,18 @@ function newDiv(dataReturned, key, status) {
     todoDiv.innerHTML += `<div class="todo-item ${key} ${status}">
                             <div class="text-area">
                                 <p class="todo-text ${key}">${dataReturned[key].text}</p>
-                                <div class="status ${key}">
+                                <div class="status ${key}" role="button" tabindex="0">
                                     <h3>${statusText}</h3>
                                 </div>
                             </div>
-                            <img src="assets/trash.svg" alt="trash icon" class="delete ${key}">
+                            <img src="assets/trash.svg" alt="trash icon" class="delete ${key}" role="button" tabindex="0">
                         </div>`;
 
     // set event listener actions for delete button
     let trashCan = document.querySelectorAll(".delete");
     for (let i = 0; i < trashCan.length; i++) {
+        // trashCan[i].addEventListener("click", deleteFunc, trashCan[i].classList[1]);
+        // trashCan[i].addEventListener("keydown", deleteFunc, trashCan[i].classList[1]);
         trashCan[i].addEventListener("click", () => {
             let id = trashCan[i].classList[1];
             deleteNote(id);
@@ -48,6 +50,16 @@ function newDiv(dataReturned, key, status) {
             toDelete.forEach(element => {
                 element.remove();
             })
+        })
+        trashCan[i].addEventListener("keydown", (event) => {
+            if (event.keyCode === 13) {
+                let id = trashCan[i].classList[1];
+                deleteNote(id);
+                const toDelete = document.querySelectorAll(`.${id}`);
+                toDelete.forEach(element => {
+                    element.remove();
+                })
+            }
         })
     }
 
@@ -58,8 +70,31 @@ function newDiv(dataReturned, key, status) {
             let id = statusButton[i].classList[1];
             statusSwap(id);
         })
+        statusButton[i].addEventListener('keydown', (event) => {
+            if (event.keyCode === 13) {
+                let id = statusButton[i].classList[1];
+                statusSwap(id);
+            }
+        })
     }
 }
+
+// // set delete function
+// function deleteFunc(id) {
+//     // let id = trashCan[i].classList[1];
+//     deleteNote(id);
+//     const toDelete = document.querySelectorAll(`.${id}`);
+//     toDelete.forEach(element => {
+//         console.log(element);
+//         element.remove();
+//     })
+// }
+
+// // set status button function
+// function statusFunc() {
+//     let id = statusButton[i].classList[1];
+//     statusSwap(id);
+// }
 
 //  Get data 
 export function getNotes() {

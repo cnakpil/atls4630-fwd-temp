@@ -1,5 +1,5 @@
 // import firebase functions
-import { writeNote } from "./app.js";
+import { writeNote, getNotes } from "./app.js";
 let fillStatus = document.querySelector(".wrapper").getAttribute("fill-status");
 var form = document.querySelector("form");
 var todoDiv = document.querySelector(".todo");
@@ -18,7 +18,7 @@ form.addEventListener('submit', (event) => {
     inputElement.setAttribute("placeholder", "DO MORE +");
     // Reset form
     form.reset();
-    // getNotes();
+    getNotes();
     // todoDiv.innerHTML += `<div class="todo-item ${newID} false">
     //                         <div class="text-area">
     //                             <p class="todo-text ${newID}">${inputValue}</p>

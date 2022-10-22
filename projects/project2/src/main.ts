@@ -24,7 +24,7 @@ form.addEventListener('submit', (event) => {
     // Reset form
     form.reset();
 
-    // getNotes();
+    getNotes();
 
     // todoDiv.innerHTML += `<div class="todo-item ${newID} false">
     //                         <div class="text-area">
