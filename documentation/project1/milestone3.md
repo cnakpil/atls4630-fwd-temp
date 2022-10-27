@@ -2,6 +2,8 @@
 
 [PREVIOUS MILESTONE](milestone2.md)
 
+[NEXT MILESTONE](milestone4.md)
+
 [LIVE DEMO](https://atls4630-fwd.vercel.app/projects/project1/index.html)
 
 ## Project Brief
