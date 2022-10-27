@@ -4,7 +4,7 @@
 
 ## Proposal
 
-I want to continue working on my to-do list app that I created in Project 1 and improve the user experience through interactions and adding user authentication.
+I want to continue working on my to-do list app that I created in Project 1 and improve the user experience through improved interactions with the to-do items and adding user authentication so that users have the choice of using the "free-for-all" guest account, or by making their own private to-do list.
 
 New technologies:
 
