@@ -12,7 +12,7 @@ export default class Title extends React.Component {
             color: 'darkblue'
         };
         return (
-            <h1 style={styles}> Hello {this.name}!</h1 >
+            <h1 className="test-heading" style={styles}> Hello {this.name}!</h1 >
         );
     }
 }
