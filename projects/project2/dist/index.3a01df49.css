@@ -1,0 +1,157 @@
+@import "https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono&display=swap";
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Oswald, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html {
+  --color-text: #313131;
+  --todo-text-color: #fff;
+  --todo-bg-color: var(--color-text);
+  --status-hover-color: #fe019a;
+}
+
+h3 {
+  text-align: center;
+  margin: 0;
+  font-size: calc(12px + 1vw);
+  line-height: calc(12px + 1.25vw);
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 9vw;
+}
+
+p, input {
+  font-family: Roboto Mono, monospace;
+  font-size: calc(12px + .25vw);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.wrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+header {
+  min-width: 315px;
+  text-align: center;
+}
+
+[fill-status="false"] header {
+  padding-top: 10vw;
+  padding-bottom: 3vw;
+}
+
+[fill-status="true"] header {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+input[type="text"] {
+  border: calc(1px + .15vw) solid var(--color-text);
+  width: 50vw;
+  overflow-wrap: break-word;
+  border-radius: .65vw;
+  margin-top: 1.5vw;
+  margin-bottom: 3vw;
+  padding: .5rem;
+}
+
+input[type="text"]::placeholder {
+  color: var(--color-text);
+  opacity: 1;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus::placeholder {
+  color: #0000;
+}
+
+button {
+  color: var(--color-text);
+}
+
+.todo-item {
+  width: 54.3vw;
+  min-width: 315px;
+  flex-direction: row;
+  margin-bottom: 1.5vw;
+  padding: 0;
+  display: flex;
+  position: relative;
+  left: 1.35vw;
+}
+
+.text-area p {
+  width: 82%;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 1vw 1.5vw;
+}
+
+.text-area {
+  border: calc(2px + .1vw) solid var(--color-text);
+  width: 100%;
+  border-radius: 1vw;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 1vw;
+  display: flex;
+}
+
+.status {
+  border-left: calc(2px + .1vw) solid var(--color-text);
+  background-color: var(--todo-bg-color);
+  min-height: 100%;
+  border-radius: 0 .75vw .75vw 0;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5vw;
+  transition: all .15s ease-in-out;
+  display: flex;
+}
+
+.status:hover {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.false .status {
+  color: var(--todo-text-color);
+  background-color: var(--color-text);
+}
+
+.true .status, .false .status:hover {
+  color: var(--color-text);
+  background-color: var(--todo-text-color);
+}
+
+.true .status:hover {
+  color: var(--todo-text-color);
+  background-color: var(--color-text);
+}
+
+.delete {
+  width: 1.75vw;
+  transition: all .15s ease-in-out;
+}
+
+.delete:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */

@@ -13,6 +13,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase();
 const dbRef = ref(db);
 var todoDiv = document.querySelector(".todo");
+var trashCanIcon = require("../assets/trash.svg");
 // watch the database for changes. On change, run getNotes function. This could all be one function, 
 // but this aspect is being gerry-rigged in after the fact so yolo.
 onValue(dbRef, (snapshot) => {
@@ -49,7 +50,7 @@ function newDiv(dataReturned, key, status) {
                                     <h3>${statusText}</h3>
                                 </div>
                             </div>
-                            <img src="./assets/trash.png" alt="trash icon" class="delete ${key}" role="button" tabindex="0">
+                            <img src="${trashCanIcon}" alt="trash icon" class="delete ${key}" role="button" tabindex="0">
                         </div>`;
     // set event listener actions for delete button
     let trashCan = document.querySelectorAll(".delete");
