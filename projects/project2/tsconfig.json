@@ -4,7 +4,9 @@
         "allowJs": true,
         "target": "es6",
         "rootDir": "./src",
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
     },
     "include": [
         "src/*"
