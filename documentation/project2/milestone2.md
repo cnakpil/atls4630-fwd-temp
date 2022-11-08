@@ -22,4 +22,3 @@ The rest can come later.
 - [ ] Add animations for funsies
 - [ ] Use a bundler
 - [ ] Convert entire app to react
-
