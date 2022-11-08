@@ -1,0 +1,25 @@
+{
+  "name": "task5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode=development",
+    "start": "webpack serve --mode=development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "https-server": "^0.1.2",
+    "ipapi.co": "^0.3.0",
+    "ipify": "^6.0.0",
+    "public-ip": "^6.0.1"
+  }
+}
