@@ -14,14 +14,15 @@ const db = getDatabase();
 const dbRef = ref(db);
 var todoDiv = document.querySelector(".todo");
 var trashCanIcon = require("../assets/trash.svg");
+var todoDiv = document.querySelector(".todo");
+var todoComplete = document.querySelector(".complete");
+var didIt = document.querySelector(".did-it");
+var form = document.querySelector("form");
 // watch the database for changes. On change, run getNotes function. This could all be one function, 
 // but this aspect is being gerry-rigged in after the fact so yolo.
 onValue(dbRef, (snapshot) => {
     getNotes();
 });
-let fillStatus = document.querySelector(".wrapper").getAttribute("fill-status");
-var form = document.querySelector("form");
-var todoDiv = document.querySelector(".todo");
 // On form submission, input note text to the database and add a new todo item
 form.addEventListener('submit', (event) => {
     var headerElement = document.querySelector("header");
@@ -43,7 +44,8 @@ form.addEventListener('submit', (event) => {
 function newDiv(dataReturned, key, status) {
     let statusText = "";
     status ? statusText = "DID IT" : statusText = "DO IT";
-    todoDiv.innerHTML += `<div class="todo-item ${key} ${status}">
+    if (status === true) {
+        todoComplete.innerHTML += `<div class="todo-item ${key} true">
                             <div class="text-area">
                                 <p class="todo-text ${key}">${dataReturned[key].text}</p>
                                 <div class="status ${key}" role="button" tabindex="0">
@@ -52,6 +54,18 @@ function newDiv(dataReturned, key, status) {
                             </div>
                             <img src="${trashCanIcon}" alt="trash icon" class="delete ${key}" role="button" tabindex="0">
                         </div>`;
+    }
+    else {
+        todoDiv.innerHTML += `<div class="todo-item ${key} false">
+                            <div class="text-area">
+                                <p class="todo-text ${key}">${dataReturned[key].text}</p>
+                                <div class="status ${key}" role="button" tabindex="0">
+                                    <h3>${statusText}</h3>
+                                </div>
+                            </div>
+                            <img src="${trashCanIcon}" alt="trash icon" class="delete ${key}" role="button" tabindex="0">
+                        </div>`;
+    }
     // set event listener actions for delete button
     let trashCan = document.querySelectorAll(".delete");
     for (let i = 0; i < trashCan.length; i++) {
@@ -80,6 +94,7 @@ function newDiv(dataReturned, key, status) {
         statusButton[i].addEventListener('click', () => {
             let id = statusButton[i].classList[1];
             statusSwap(id);
+            console.log(statusButton[i].classList);
         });
         statusButton[i].addEventListener('keydown', (event) => {
             if (event.key === "Enter") {
@@ -88,25 +103,32 @@ function newDiv(dataReturned, key, status) {
             }
         });
     }
+    // set did it text
+    if (todoComplete.childNodes.length === 0) {
+        didIt.innerHTML = "";
+    }
+    else {
+        didIt.innerHTML = "DID IT";
+    }
 }
 //  Get data 
 export function getNotes() {
-    let allTodo = [];
+    // let allTodo = [];
     var headerElement = document.querySelector("header");
     var wrapperElement = document.querySelector(".wrapper");
     var inputElement = document.querySelector("input");
-    var todoElement = document.querySelector(".todo");
+    todoDiv.innerHTML = "";
+    todoComplete.innerHTML = "";
     get(child(dbRef, `notes/`))
         .then((snapshot) => {
         if (snapshot.exists()) {
             headerElement.innerHTML = "<h5>F***ING DO IT</h5>";
             wrapperElement.setAttribute("fill-status", "true");
             inputElement.setAttribute("placeholder", "DO MORE +");
-            todoElement.innerHTML = "";
             let dataReturned = snapshot.val();
             for (let key in dataReturned) {
-                allTodo.push(dataReturned[key].text);
-                console.log("testing status key " + dataReturned[key].done);
+                // allTodo.push(dataReturned[key].text);
+                // console.log("testing status key " + dataReturned[key].done);
                 dataReturned[key].done
                     ? newDiv(dataReturned, key, true)
                     : newDiv(dataReturned, key, false);
@@ -123,13 +145,14 @@ export function getNotes() {
         console.error(error);
     });
     // console.log(allTodo);
-    return allTodo;
+    // return allTodo;
 }
 // Swap "done" property to opposite state
 export function statusSwap(noteId) {
     var notesRef = ref(db, `notes/${noteId}`);
     let todoItem = document.querySelector(`.todo-item.${noteId}`);
     let statusElement = document.querySelector(`.status.${noteId}`);
+    console.log("swapped");
     get(child(dbRef, `notes/`))
         .then((snapshot) => {
         if (snapshot.exists()) {
@@ -181,6 +204,7 @@ export function deleteNote(noteId) {
 function styleSwap() {
     // Get elements
     var headerElement = document.querySelector("header");
+    var completeElement = document.querySelector(".did-it");
     var wrapperElement = document.querySelector(".wrapper");
     var inputElement = document.querySelector("input");
     // See if database is empty

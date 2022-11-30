@@ -1,5 +1,8 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-import { getDatabase, ref, child, get, push, set, onValue } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+import firebase from "firebase/app";
+// import "./firebase/database";
+// import { getDatabase, ref, child, get, push, set, onValue } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
+// import { getDatabase, ref, child, get, push, set, onValue } from "./firebase/database";
 
 //  Initialize
 const firebaseConfig = {
