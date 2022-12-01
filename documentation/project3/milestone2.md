@@ -1,12 +1,12 @@
+# Project 3, Milestone 2 - Check in
 
-# Project 3, Milestone 1 - Proposal
-
-[NEXT MILESTONE](milestone2.md)
+[PREV MILESTONE](milestone1.md)
+<!-- [NEXT MILESTONE](milestone3.md) -->
 
 ## Team members
 
 - Celine - Firebase, React.js
-- Charlie - React.js, Parcel
+- Charlie - React.js, Firebase
 - Torshawna - React.js, UX design
 
 ## Proposal
@@ -19,12 +19,13 @@ Technologies:
 - Firebase user authentication
 - TypeScript
 - npm
-- Parcel
 - React.js
 
 ## MVP Functions
 
+- [x] Basic todo list sends data to Firebase and updates changes
 - [ ] Add user authentication using Firebase authentication
+- [ ] Users can access specific lists
 - [ ] Display who made each Todo item
 - [ ] Display who completed each Todo item
 - [ ] Set and display due date/deadline
