@@ -5,9 +5,9 @@
 
 ## Team members
 
-- Celine - Firebase, React.js
-- Charlie - React.js, Firebase
-- Torshawna - React.js, UX design
+- Celine: Firebase, React.js
+- Charlie: React.js, Firebase
+- Torshawna: React.js, UX design
 
 ## Proposal
 
