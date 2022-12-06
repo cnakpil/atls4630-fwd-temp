@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+// import { Button, Form } from "react-bootstrap";
 import { getDatabase, ref, push } from "firebase/database";
 
 // Import firebase configuration from firebase.ts file
@@ -14,7 +14,10 @@ const TodoForm = () => {
         setTitle(e.target.value);
     };
 
-    const addTodo = () => {
+    // Method to add todo item to the todo list
+    // Extend onClick functions here
+    const addTodo = (event: any) => {
+        event.preventDefault();
         const todoRef = ref(db, "/todos");
         const todo = {
             title,
@@ -24,12 +27,10 @@ const TodoForm = () => {
     };
 
     return (
-        <Form>
-            <Form.Control onChange={handleChange} />
-            <Button type="submit" onClick={addTodo}>
-                Submit
-            </Button>
-        </Form>
+        <form>
+            <input type="text" name="name" onChange={handleChange} />
+            <input type="submit" value="Submit" onClick={addTodo} />
+        </form>
     )
 }
 
