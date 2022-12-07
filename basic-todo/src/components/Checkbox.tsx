@@ -12,7 +12,7 @@ const Checkbox = ({ label, checked, onChange }: CheckboxProps) => {
                 <input type="checkbox" checked={checked} onChange={onChange} />
                 <span>{label}</span>
             </label>
-            <p>{checked.toString()}</p>
+            {/* <p>{checked.toString()}</p> */}
         </div>
     );
 };
