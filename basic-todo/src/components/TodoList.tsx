@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { getDatabase, ref, onValue, update } from "firebase/database";
+import { getDatabase, ref, onValue, update, set } from "firebase/database";
 import Checkbox from "./Checkbox";
 
 import firebaseApp from "../firebase";
 import { Todo } from "../types";
+
+// I cannot figure out how to get the input box to clear itself I am going to scream
 
 const TodoList = () => {
     const db = getDatabase(firebaseApp);
@@ -29,25 +31,25 @@ const TodoList = () => {
         const todoRef = ref(db, "/todos/" + todo.id);
         console.log(todoRef);
         update(todoRef, { done: !todo.done });
-        console.log("done: " + !todo.done)
+        console.log("done: " + !todo.done);
     };
+
+    const deleteTodo = (todo: Todo) => {
+        const todoRef = ref(db, "/todos/" + todo.id);
+        set(todoRef, null);
+    }
 
     return (
         <div>
             <h1>Todo List</h1>
             {todoList.map((todo, index) => {
                 return (
-                    // <FormCheck
-                    //     key={index}
-                    //     checked={todo.done}
-                    //     onChange={() => changeTodoCompletion(todo)}
-                    //     label={todo.title}
-                    // />
                     <Checkbox
                         key={index}
                         checked={todo.done}
                         label={todo.title}
-                        onChange={() => changeTodoCompletion(todo)}
+                        handleChange={() => changeTodoCompletion(todo)}
+                        handleClick={() => deleteTodo(todo)}
                     />
                 );
             })}

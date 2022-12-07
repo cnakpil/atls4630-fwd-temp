@@ -1,18 +1,15 @@
 import "./Checkbox.css";
-
+import trashIcon from "../img/trash.svg";
 import { CheckboxProps } from "../types";
 
-const Checkbox = ({ label, checked, onChange }: CheckboxProps) => {
-    // const defaultChecked = checked ? checked : false;
-    // const [isChecked, setIsChecked] = useState(defaultChecked);
-
+const Checkbox = ({ label, checked, handleChange, handleClick }: CheckboxProps) => {
     return (
         <div className="checkbox-wrapper">
+            <img src={trashIcon} alt="trashcan icon" onClick={handleClick} />
             <label className="checkbox-label">
-                <input type="checkbox" checked={checked} onChange={onChange} />
+                <input type="checkbox" checked={checked} onChange={handleChange} />
                 <span>{label}</span>
             </label>
-            {/* <p>{checked.toString()}</p> */}
         </div>
     );
 };

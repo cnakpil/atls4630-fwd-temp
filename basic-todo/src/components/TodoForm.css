@@ -1,0 +1,24 @@
+input[type="text"] {
+    background-color: green;
+    /* flex-grow: 2;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    height: 20px;
+    color: grey;
+    border: none; */
+}
+
+input[type="submit"] {
+    background-color: blue;
+}
+
+/* .create {
+    border-radius: 15px;
+    margin: 10px;
+    background-color: #007a73;
+    color: white;
+    border: none;
+} */

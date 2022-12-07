@@ -9,6 +9,7 @@ const TodoForm = () => {
     const db = getDatabase(firebaseApp);
 
     const [title, setTitle] = useState("");
+    // const [inputText, setInputText] = useState("");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTitle(e.target.value);
@@ -24,6 +25,7 @@ const TodoForm = () => {
             done: false,
         };
         push(todoRef, todo);
+        // setInputText("");
     };
 
     return (
