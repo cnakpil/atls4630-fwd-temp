@@ -1,5 +1,7 @@
 .checkbox-wrapper {
+    /* background-color: turquoise; */
     display: flex;
+    flex-direction: row;
     gap: 5px;
     align-items: center;
     margin: 2px;
@@ -31,6 +33,7 @@
     border: 0.15em solid #007a73;
     outline: none;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .checkbox-label input[type="checkbox"]:focus {

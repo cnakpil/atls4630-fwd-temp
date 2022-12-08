@@ -1,9 +1,12 @@
+import "./TodoForm.css";
 import { useState } from "react";
-// import { Button, Form } from "react-bootstrap";
-import { getDatabase, ref, push } from "firebase/database";
 
 // Import firebase configuration from firebase.ts file
 import firebaseApp from "../firebase";
+import { getDatabase, ref, push } from "firebase/database";
+
+// To prevent empty input and to clear the input form on submit is more manual work than I have time
+// to figure out right now. Easiest would be to use a react hook library like the React Hook Form package
 
 const TodoForm = () => {
     const db = getDatabase(firebaseApp);
@@ -29,9 +32,9 @@ const TodoForm = () => {
     };
 
     return (
-        <form>
-            <input type="text" name="name" onChange={handleChange} />
-            <input type="submit" value="Submit" onClick={addTodo} />
+        <form onSubmit={addTodo}>
+            <input type="text" name="name" onChange={handleChange} placeholder="Enter todo item" />
+            <input type="submit" value="Submit" />
         </form>
     )
 }

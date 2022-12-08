@@ -1,18 +1,23 @@
 input[type="text"] {
-    background-color: green;
+    background-color: white;
     /* flex-grow: 2;
     background-color: white;
+    */
     border-radius: 2rem;
     padding: 10px;
     margin: 10px;
-    text-align: center;
+    text-align: left;
     height: 20px;
     color: grey;
-    border: none; */
+    border: black solid 1px;
+    width: 400px;
 }
 
 input[type="submit"] {
-    background-color: blue;
+    /* background-color: blue; */
+    width: 75px;
+    border-radius: 2rem;
+    padding: 10px;
 }
 
 /* .create {

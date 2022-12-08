@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getDatabase, ref, onValue, update, set } from "firebase/database";
 import Checkbox from "./Checkbox";
+import "./TodoList.css";
 
 import firebaseApp from "../firebase";
 import { Todo } from "../types";
@@ -40,8 +41,7 @@ const TodoList = () => {
     }
 
     return (
-        <div>
-            <h1>Todo List</h1>
+        <div className="list-wrapper">
             {todoList.map((todo, index) => {
                 return (
                     <Checkbox

@@ -5,8 +5,11 @@ import TodoList from "./components/TodoList";
 function App() {
   return (
     <div className="app-wrapper">
-      <TodoForm />
-      <TodoList />
+      <div className="app-container">
+        <h1>React + Firebase Todo App</h1>
+        <TodoList />
+        <TodoForm />
+      </div>
     </div >
   );
 }

@@ -8,7 +8,7 @@ const Checkbox = ({ label, checked, handleChange, handleClick }: CheckboxProps) 
             <img src={trashIcon} alt="trashcan icon" onClick={handleClick} />
             <label className="checkbox-label">
                 <input type="checkbox" checked={checked} onChange={handleChange} />
-                <span>{label}</span>
+                <div>{label}</div>
             </label>
         </div>
     );
