@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="app-wrapper">
       <div className="app-container">
-        <h1>React + Firebase Todo App</h1>
+        <h1>Basic React + Firebase Todo App</h1>
         <TodoList />
         <TodoForm />
       </div>
