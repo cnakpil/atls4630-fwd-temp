@@ -1,6 +1,7 @@
 # Project 3, Milestone 3 - Final Project & Reflection
 
 [PREV MILESTONE](milestone2.md)
+[LIVE DEMO](https://basic-todo-react-firebase.vercel.app/)
 
 ## Project Brief
 
