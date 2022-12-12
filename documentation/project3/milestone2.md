@@ -1,7 +1,7 @@
 # Project 3, Milestone 2 - Check in
 
 [PREV MILESTONE](milestone1.md)
-<!-- [NEXT MILESTONE](milestone3.md) -->
+[NEXT MILESTONE](milestone3.md)
 
 ## Team members
 
