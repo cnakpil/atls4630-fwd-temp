@@ -1,4 +1,6 @@
 import AOS from './node_modules/aos';
+import 'aos/dist/aos.css';
+AOS.init();
 // import './node_modules/aos/dist/aos.css'; // You can also use <link> for styles
 // import AOS from "https://unpkg.com/aos@next/dist/aos.js";
 // import "https://unpkg.com/aos@next/dist/aos.css";
