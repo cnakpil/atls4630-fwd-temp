@@ -39,7 +39,7 @@ function weather() {
 
         // get precipitation probability
         let pop = "";
-        pop = data.list[0]["pop"] * 100;
+        pop = Math.round(data.list[0]["pop"] * 100);
         console.log(`${pop}%`);
 
         // change top text depending on pop value
@@ -47,10 +47,10 @@ function weather() {
 
         // normal function version
         function textSwap(test) {
-          if((test != 8) && (test != 11) && ((test < 80)||(test => 90))){
+          if ((test != 8) && (test != 11) && ((test < 80) || (test => 90))) {
             console.log("not vowel")
             return "images/there-is.svg";
-          } else{
+          } else {
             console.log("vowel")
             return "images/there-is-an.svg"
           }
