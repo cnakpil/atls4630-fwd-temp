@@ -1,6 +1,6 @@
 # Project 2, Milestone 1 - Proposal
 
-<!-- [NEXT MILESTONE](milestone2.md) -->
+[NEXT MILESTONE](milestone2.md)
 
 ## Proposal
 
